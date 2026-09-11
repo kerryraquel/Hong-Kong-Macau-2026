@@ -6,8 +6,8 @@
 <title>HK, Macau & Tokyo Trip</title>
 
 <!-- --- 📱 App Icons --- -->
-<link rel="apple-touch-icon" sizes="180x180" href="https://images.unsplash.com/photo-1542051812891-b064eca0371e?q=80&w=180&auto=format&fit=crop">
-<link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1542051812891-b064eca0371e?q=80&w=180&auto=format&fit=crop">
+<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/kerryraquel/Asia-Trip-2026/c5cbc4bbcb0b0f6069a012669df4c39bffe3f3bc/app%20icon%20tokyo.png">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kerryraquel/Asia-Trip-2026/c5cbc4bbcb0b0f6069a012669df4c39bffe3f3bc/app%20icon%20tokyo.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -671,16 +671,16 @@ body {
               <a v-for="spot in spots.hk" :key="spot.name" 
                  :href="'https://www.google.com/maps/search/?api=1&query=' + spot.name" target="_blank"
                  class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
-                 <div class="flex items-start justify-between mb-2">
-                   <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center text-sm">
-                     <i :class="['fa-solid', spot.icon]"></i>
-                   </div>
-                   <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded">{{ spot.tag }}</span>
-                 </div>
-                 <div>
-                   <div class="font-bold text-slate-800 text-sm leading-tight mb-1">{{ spot.name }}</div>
-                   <div class="text-[10px] text-slate-400 leading-tight">{{ spot.note }}</div>
-                 </div>
+                  <div class="flex items-start justify-between mb-2">
+                    <div class="w-8 h-8 rounded-full bg-blue-50 text-blue-500 flex items-center justify-center text-sm">
+                      <i :class="['fa-solid', spot.icon]"></i>
+                    </div>
+                    <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded">{{ spot.tag }}</span>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-800 text-sm leading-tight mb-1">{{ spot.name }}</div>
+                    <div class="text-[10px] text-slate-400 leading-tight">{{ spot.note }}</div>
+                  </div>
               </a>
             </div>
           </div>
@@ -692,16 +692,16 @@ body {
               <a v-for="spot in spots.macau" :key="spot.name" 
                  :href="'https://www.google.com/maps/search/?api=1&query=' + spot.name" target="_blank"
                  class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
-                 <div class="flex items-start justify-between mb-2">
-                   <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center text-sm">
-                     <i :class="['fa-solid', spot.icon]"></i>
-                   </div>
-                   <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded">{{ spot.tag }}</span>
-                 </div>
-                 <div>
-                   <div class="font-bold text-slate-800 text-sm leading-tight mb-1">{{ spot.name }}</div>
-                   <div class="text-[10px] text-slate-400 leading-tight">{{ spot.note }}</div>
-                 </div>
+                  <div class="flex items-start justify-between mb-2">
+                    <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center text-sm">
+                      <i :class="['fa-solid', spot.icon]"></i>
+                    </div>
+                    <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded">{{ spot.tag }}</span>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-800 text-sm leading-tight mb-1">{{ spot.name }}</div>
+                    <div class="text-[10px] text-slate-400 leading-tight">{{ spot.note }}</div>
+                  </div>
               </a>
             </div>
           </div>
@@ -713,16 +713,16 @@ body {
               <a v-for="spot in spots.tokyo" :key="spot.name" 
                  :href="'https://www.google.com/maps/search/?api=1&query=' + spot.name" target="_blank"
                  class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
-                 <div class="flex items-start justify-between mb-2">
-                   <div class="w-8 h-8 rounded-full bg-indigo-50 text-indigo-500 flex items-center justify-center text-sm">
-                     <i :class="['fa-solid', spot.icon]"></i>
-                   </div>
-                   <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded">{{ spot.tag }}</span>
-                 </div>
-                 <div>
-                   <div class="font-bold text-slate-800 text-sm leading-tight mb-1">{{ spot.name }}</div>
-                   <div class="text-[10px] text-slate-400 leading-tight">{{ spot.note }}</div>
-                 </div>
+                  <div class="flex items-start justify-between mb-2">
+                    <div class="w-8 h-8 rounded-full bg-indigo-50 text-indigo-500 flex items-center justify-center text-sm">
+                      <i :class="['fa-solid', spot.icon]"></i>
+                    </div>
+                    <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded">{{ spot.tag }}</span>
+                  </div>
+                  <div>
+                    <div class="font-bold text-slate-800 text-sm leading-tight mb-1">{{ spot.name }}</div>
+                    <div class="text-[10px] text-slate-400 leading-tight">{{ spot.note }}</div>
+                  </div>
               </a>
             </div>
           </div>
@@ -756,7 +756,7 @@ body {
 <script>
 const {createApp,ref,computed,onMounted}=Vue;
 createApp({
- setup(){
+  setup(){
    const tab=ref('plan');
    const introTab=ref('hk'); 
    
@@ -957,7 +957,7 @@ createApp({
    ];
 
    return{tab,weatherHk,weatherMo,weatherTyo,countText,days,selDay,rateCad,rateMop,e,cats,pays,records,addRec,delRec,catIcon,totalExpense,spots,introTab,attractionDetails};
- }
+   }
 }).mount('#app');
 </script>
 </body>
