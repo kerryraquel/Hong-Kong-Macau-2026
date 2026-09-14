@@ -1,2 +1,2 @@
-# 2026 Asia Trip
+# 2026 Hong Kong & Macau Trip
 Hong Kong - Macau
