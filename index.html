@@ -491,7 +491,7 @@ body {
                 <span class="text-[10px] font-bold bg-blue-50 text-blue-600 px-2 py-1 rounded-full">Sep 20 - Sep 23</span>
               </div>
               <div class="text-sm text-slate-600 mb-1 flex items-center">
-                <i class="fa-solid fa-bed mr-2 text-slate-400"></i> The Murray, Hong Kong
+                <i class="fa-solid fa-bed mr-2 text-slate-400"></i> 華美達海景酒店 (Ramada Hong Kong Harbour View)
               </div>
               <div class="text-xs text-emerald-500 pl-6 font-bold"><i class="fa-solid fa-check"></i> Confirmed</div>
             </div>
@@ -506,7 +506,7 @@ body {
                 <span class="text-[10px] font-bold bg-emerald-50 text-emerald-600 px-2 py-1 rounded-full">Sep 23 - Sep 25</span>
               </div>
               <div class="text-sm text-slate-600 mb-1 flex items-center">
-                <i class="fa-solid fa-bed mr-2 text-slate-400"></i> Wynn Palace Cotai
+                <i class="fa-solid fa-bed mr-2 text-slate-400"></i> 十月初五街大本營
               </div>
               <div class="text-xs text-emerald-500 pl-6 font-bold"><i class="fa-solid fa-check"></i> Confirmed</div>
             </div>
@@ -521,28 +521,10 @@ body {
                  <span class="text-[10px] font-bold bg-indigo-50 text-indigo-500 px-2 py-1 rounded-full">Sep 25 - Sep 30</span>
                </div>
                <div class="text-sm text-slate-600 mb-1 flex items-center">
-                 <i class="fa-solid fa-bed mr-2 text-slate-400"></i> Shinjuku Prince Hotel
+                 <i class="fa-solid fa-bed mr-2 text-slate-400"></i> 未定 (TBD)
                </div>
-               <div class="text-xs text-emerald-500 pl-6 font-bold"><i class="fa-solid fa-check"></i> Booked</div>
+               <div class="text-xs text-amber-500 pl-6 font-bold"><i class="fa-solid fa-clock"></i> Pending Selection</div>
              </div>
-          </div>
-
-          <!-- Shibuya Sky Ticket Card -->
-          <div class="bg-slate-800 text-white rounded-xl p-4 relative overflow-hidden flex justify-between items-center mb-4 shadow-lg">
-            <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl pointer-events-none"><i class="fa-solid fa-ticket"></i></div>
-            
-            <div class="relative z-10 flex-1 pr-4">
-              <h3 class="font-bold text-lg mb-1">Shibuya Sky Ticket</h3>
-              <p class="text-xs text-slate-300 mb-3">Booked · Sunset Session</p>
-              <div class="text-[10px] text-emerald-300 border border-emerald-600/50 bg-emerald-900/30 rounded px-2 py-1 inline-block">
-                <i class="fa-solid fa-check-circle mr-1"></i> QR Code Ready
-              </div>
-            </div>
-
-            <div class="relative z-10 bg-white p-1 rounded-lg shadow-lg shrink-0">
-               <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=ShibuyaSkyTicket12345" 
-                    alt="QR Code" class="w-24 h-24 block object-cover rounded-md">
-            </div>
           </div>
 
         </div>
@@ -596,12 +578,12 @@ body {
                 <i class="fa-brands fa-fort-awesome absolute right-2 bottom-2 text-6xl text-emerald-200/30"></i>
                 <h3 class="font-black text-xl text-slate-800 mb-1">Portuguese Heritage</h3>
                 <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                  A perfect blend of European architecture and Chinese culture. Stroll through cobblestone streets, enjoy slow living in Coloane, and experience the dazzling Cotai Strip.
+                  A perfect blend of European architecture and Chinese culture. Stroll through cobblestone streets, enjoy slow living in Coloane, and experience the dazzling Cotai Strip & Taipa Seaside Promenade.
                 </p>
                 <div class="space-y-2">
                   <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
                     <span class="bg-emerald-100 text-emerald-600 px-2 py-1 rounded">Must Do</span>
-                    <span>St. Paul's, Mount Fortress, Taipa Houses</span>
+                    <span>St. Paul's, Mount Fortress, Taipa Seaside Promenade</span>
                   </div>
                   <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
                     <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded">Food</span>
@@ -622,11 +604,11 @@ body {
                 <div class="space-y-2">
                   <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
                     <span class="bg-indigo-100 text-indigo-600 px-2 py-1 rounded">Must Do</span>
-                    <span>Shibuya Sky, Asakusa, Shimokitazawa</span>
+                    <span>Asakusa, Shimokitazawa, Tokyo Skytree</span>
                   </div>
                   <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
                     <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded">Food</span>
-                    <span>Wagyu Beef, Ramen, Fresh Sushi</span>
+                    <span>Wagyu Beef, Ramen, Soup Curry</span>
                   </div>
                 </div>
              </div>
@@ -846,38 +828,41 @@ createApp({
        {time:'14:15',title:'Coloane & Lord Stow\'s',note:'Quiet coastal village walk and the original Portuguese egg tarts.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-bus"></i> Bus (20 mins)'},
        {time:'17:00',title:'Restaurante Kapok (Dinner)',note:'Exquisite Cantonese cuisine and traditional double-boiled soup.', isFood: true, hasTicket: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-taxi"></i> Taxi to Taipa'},
        {time:'19:00',title:'Wynn Palace Fountain Show',note:'Spectacular musical fountain show at the Performance Lake.', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-taxi"></i> Taxi / Light Rail'},
-       {time:'20:20',title:'Cotai Strip Night View',note:'Capture the Parisian Tower and shop at the Venetian Grand Canal.', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'}
+       {time:'20:20',title:'Cotai Strip & Taipa Seaside Promenade',note:'Capture the Parisian Tower, shop at the Venetian, and enjoy the waterfront night breeze.', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'}
      ]},
-     {day:'Day 6', weekDay:'FRI', display:'25',date:'Sep 25',city:'Macau -> Tokyo',plans:[
+     {day:'Day 6', weekDay:'FRI', display:'25',date:'Sep 25',city:'Tokyo (Mid-Autumn)',plans:[
        {time:'06:30',title:'Check-out & Airport Transfer',note:'Pack up and head to Macau International Airport (MFM).', transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-taxi"></i> Taxi'},
        {time:'09:30',title:'Flight NX862 to Tokyo',note:'Departing for Tokyo Narita (NRT) Terminal 2 on Airbus A320.', isFerry: false, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-plane"></i> Macau Air'},
-       {time:'15:00',title:'Arrive in Tokyo',note:'Land at NRT T2, clear customs and grab luggage.', isNight: false, transport:'<span class="text-slate-400">Location:</span> NRT T2'},
-       {time:'17:00',title:'Check-in & Shinjuku Night',note:'Check into the hotel and explore Omoide Yokocho for Izakaya vibes.', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Narita Express (N\'EX)'}
+       {time:'15:30',title:'Skyliner to Asakusa',note:'搭乘 Skyliner 直達上野/淺草區塊飯店 Check-in。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Keisei Skyliner'},
+       {time:'17:00',title:'Asakusa Senso-ji & Nakamise',note:'漫步仲見世商店街，品嚐現炸淺草炸肉餅與章魚小丸子，參拜淺草寺。', isArch: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'},
+       {time:'19:30',title:'Asakusa Hoppy Street',note:'【中秋夜飲】在充滿露天煙火氣的居酒屋巷弄坐下，享用燉煮牛筋、炭火串燒與冰涼生啤酒。', isFood: true, isNight: true, transport:'<span class="text-slate-400">Location:</span> Hoppy Street'}
      ]},
      {day:'Day 7', weekDay:'SAT', display:'26',date:'Sep 26',city:'Tokyo',plans:[
-       {time:'10:00',title:'Asakusa Senso-ji',note:'Tokyo\'s oldest temple and Nakamise shopping street.', isArch: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Subway (15 mins)'},
-       {time:'14:00',title:'Ueno Park & Ameyoko',note:'Lively market street for bargain hunting and street food.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Subway (5 mins)'},
-       {time:'19:00',title:'Tokyo Skytree',note:'High-altitude night views of Tokyo metropolis.', isNight: true, hasTicket: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Subway (10 mins)'}
+       {time:'11:00',title:'Imperial Palace Gaien',note:'悠閒前往皇居外苑，漫步於寬闊護城河與松樹林間。', isArch: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Subway'},
+       {time:'13:00',title:'Daikanyama & Omotesando',note:'漫步 T-Site 蔦屋書店、Monkey Cafe 螺旋木建築，享受手沖咖啡，隨後漫步至原宿/表參道。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Toyoko Line'},
+       {time:'17:00',title:'Shinjuku Shopping & Tokyo Gov Bldg',note:'前往新宿 Isetan / 高島屋購物，登上東京都廳免費展望台看高空夜景。', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> JR Yamanote Line'},
+       {time:'20:00',title:'Omoide Yokocho & Hidden Bar',note:'體驗懷舊串燒，隨後隨性走進新宿巷弄隱密酒吧（Bar BenFiddich 風格）喝一杯威士忌。', isFood: true, isNight: true, transport:'<span class="text-slate-400">Location:</span> Shinjuku Alleyways'}
      ]},
      {day:'Day 8', weekDay:'SUN', display:'27',date:'Sep 27',city:'Tokyo',plans:[
-       {time:'10:00',title:'Kamakura Daibutsu',note:'Historic Great Buddha and Hase-dera Temple.', isArch: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Odakyu Line (60 mins)'},
-       {time:'14:00',title:'Enoshima',note:'Classic seaside vibes and Kamakura Kokomae crossing.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-tram"></i> Enoden Line (15 mins)'},
-       {time:'19:00',title:'Return to Shinjuku',note:'Shopping at Don Quijote and BicCamera.', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Train (60 mins)'}
+       {time:'11:00',title:'Kappabashi Kitchenware Town',note:'在專業刀具專門店 Cutlery Tsubaya 挑選職人手打高品質日本廚刀。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Subway'},
+       {time:'12:30',title:'Ginza Omakase & Itoya',note:'前往銀座品嚐高性價比午間極鮮 Omakase 壽司盛宴，隨後開逛 Ginza Itoya 與百貨地下街。', isFood: true, hasTicket: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Ginza Line'},
+       {time:'18:00',title:'Tokyo Station Marunouchi & KITTE',note:'登上 KITTE 4F/6F 屋頂庭園，俯瞰百年紅磚車站建築的絕美照明與都市天際線。', isArch: true, isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'},
+       {time:'20:00',title:'Ichiran Ramen Ueno',note:'返回上野前往一蘭拉麵朝聖，滿足在日本吃一蘭的心願。', isFood: true, transport:'<span class="text-slate-400">Location:</span> Ueno Atre'}
      ]},
      {day:'Day 9', weekDay:'MON', display:'28',date:'Sep 28',city:'Tokyo',plans:[
-       {time:'10:00',title:'Meiji Shrine',note:'Serene forest walk and iconic massive wooden Torii gates.', isRelax: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> JR Yamanote Line (20 mins)'},
-       {time:'14:00',title:'Harajuku & Omotesando',note:'Trendy fashion, Cat Street, and architectural marvels.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'},
-       {time:'17:00',title:'Shibuya Sky',note:'360-degree open-air observation deck & Shibuya Crossing.', isNight: true, hasTicket: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk (15 mins)'}
+       {time:'11:00',title:'Shimokitazawa Subculture Walk',note:'漫步於古著巷弄、BONUS TRACK 木造社區與幾何街區，午餐品嚐北海道湯咖哩。', isWalk: true, isFood: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Odakyu Line'},
+       {time:'15:00',title:'Tokyo Station Yaesu Whisky & Shopping',note:'前往八重洲地下街 Liquors Hasegawa 尋找 Kilchoman 日本限定版威士忌，並進行藥妝與唐吉訶德掃貨。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> JR Line'},
+       {time:'18:30',title:'Roppongi Hills & Tokyo Tower',note:'近距離欣賞標誌性的東京鐵塔璀璨夜景，隨後與老同學於社區小酒館乾杯。', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Hibiya Line'}
      ]},
      {day:'Day 10', weekDay:'TUE', display:'29',date:'Sep 29',city:'Tokyo',plans:[
-       {time:'09:00',title:'Tsukiji Outer Market',note:'Fresh seafood bowls and legendary Tamagoyaki.', isFood: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Subway (20 mins)'},
-       {time:'13:00',title:'Shimokitazawa',note:'Vintage clothing, indie records, and hipster cafes.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Inokashira Line (20 mins)'},
-       {time:'19:00',title:'Farewell Wagyu Dinner',note:'Premium Japanese Wagyu BBQ (Yakiniku) to celebrate the trip.', isFood: true, hasTicket: true, transport:'<span class="text-slate-400">Location:</span> Shinjuku / Shibuya'}
+       {time:'11:00',title:'Maxell Aqua Park Shinagawa',note:'欣賞現代聲光影音與水族海洋生物結合的夢幻展演。', isRelax: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> JR Yamanote Line'},
+       {time:'14:00',title:'Kiyosumi-shirakawa Coffee Stroll',note:'在深川公園與東京都現代美術館周邊漫步，隨性享受獨立手沖咖啡與老倉庫文青選品。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Oedo Line'},
+       {time:'19:00',title:'Farewell Wagyu / Sukiyaki Dinner',note:'前往銀座或六本木享用頂級和牛燒肉或老牌壽喜燒盛宴，為旅程劃下句點。', isFood: true, hasTicket: true, transport:'<span class="text-slate-400">Location:</span> Ginza / Roppongi'}
      ]},
      {day:'Day 11', weekDay:'WED', display:'30',date:'Sep 30',city:'Tokyo -> Home',plans:[
-       {time:'10:00',title:'Morning Free Time',note:'Last-minute shopping or packing.', isWalk: true, transport:''},
-       {time:'12:30',title:'Head to Narita Airport',note:'Travel to NRT Terminal 2.', transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> N\'EX / Skyliner'},
-       {time:'16:00',title:'Flight NX861 to Macau',note:'Departing for MFM on Airbus A320. Friend flies to YVR.', transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-plane"></i> Macau Air'},
+       {time:'11:00',title:'Check-out & Skyliner to NRT',note:'自然醒辦理退房，於上野搭乘京成 Skyliner 直達成田國際機場。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Keisei Skyliner'},
+       {time:'13:00',title:'Narita Airport Duty Free Shopping',note:'逛 Traveler\'s Factory，於 Fa-So-La Duty Free 採買威士忌與獺祭，掃貨 Press Butter Sand 甜點。', isWalk: true, transport:'<span class="text-slate-400">Location:</span> NRT Terminal 2'},
+       {time:'16:00',title:'Flight NX861 to Macau',note:'帶著滿載的手工廚刀、威士忌與戰利品搭機返回。', isFerry: false, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-plane"></i> Macau Air'},
        {time:'20:05',title:'Arrive in Macau',note:'Home sweet home.', transport:'<i class="fa-solid fa-house"></i> Arrive safely'}
      ]}
    ]);
@@ -940,20 +925,20 @@ createApp({
      ],
      tokyo: [
        { name: 'Senso-ji', tag: 'Temple', note: 'Oldest temple in Asakusa', icon: 'fa-torii-gate' },
-       { name: 'Shibuya Sky', tag: 'Views', note: '360° observation deck', icon: 'fa-camera' },
+       { name: 'Hoppy Street', tag: 'Food', note: 'Asakusa izakaya alley', icon: 'fa-beer-mug-empty' },
        { name: 'Shimokitazawa', tag: 'Culture', note: 'Vintage and indie cafes', icon: 'fa-record-vinyl' },
        { name: 'Tsukiji', tag: 'Seafood', note: 'Outer market fresh eats', icon: 'fa-fish' }
      ]
    };
 
-   // --- Attraction Details ---
+   // --- Attraction Details (Thumbnail Integrated) ---
    const attractionDetails = [
-      { city: 'HK', name: 'Victoria Peak', tag: 'Landmark', desc: 'The highest hill on Hong Kong Island, offering breathtaking panoramic views of Victoria Harbour and the glittering skyscrapers.' },
-      { city: 'HK', name: 'Tai O Fishing Village', tag: 'Culture', desc: 'Known as the "Venice of Hong Kong," featuring traditional stilt houses over the water and a deep-rooted fishing heritage.' },
-      { city: 'Macau', name: 'Ruins of St. Paul\'s', tag: 'Heritage', desc: 'The facade of what was originally a 17th-century Portuguese church dedicated to Saint Paul the Apostle, destroyed by fire.' },
-      { city: 'Macau', name: 'Mount Fortress', tag: 'Views', desc: 'Built by the Jesuits, this historic military fort offers spectacular panoramic views of the entire Macau peninsula.' },
-      { city: 'Tokyo', name: 'Shibuya Crossing & Sky', tag: 'Landmark', desc: 'The world\'s busiest pedestrian crossing, best viewed from the open-air Shibuya Sky observation deck at sunset.' },
-      { city: 'Tokyo', name: 'Senso-ji Temple', tag: 'Culture', desc: 'Tokyo\'s oldest and most significant Buddhist temple, approached via the vibrant Nakamise shopping street.' }
+      { city: 'HK', name: 'Victoria Peak', tag: 'Landmark', desc: 'The highest hill on Hong Kong Island, offering breathtaking panoramic views of Victoria Harbour and the glittering skyscrapers.', img: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=300&auto=format&fit=crop' },
+      { city: 'HK', name: 'Tai O Fishing Village', tag: 'Culture', desc: 'Known as the "Venice of Hong Kong," featuring traditional stilt houses over the water and a deep-rooted fishing heritage.', img: 'https://images.unsplash.com/photo-1542051812891-b064eca0371e?q=80&w=300&auto=format&fit=crop' },
+      { city: 'Macau', name: 'Ruins of St. Paul\'s', tag: 'Heritage', desc: 'The facade of what was originally a 17th-century Portuguese church dedicated to Saint Paul the Apostle, destroyed by fire.', img: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=300&auto=format&fit=crop' },
+      { city: 'Macau', name: 'Taipa Seaside Promenade', tag: 'Views', desc: 'A scenic waterfront walkway along the coast, offering stunning night views of the Cotai Strip and bridges.', img: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=300&auto=format&fit=crop' },
+      { city: 'Tokyo', name: 'Asakusa Senso-ji', tag: 'Culture', desc: 'Tokyo\'s oldest and most significant Buddhist temple, approached via the vibrant Nakamise shopping street and Kaminarimon gate.', img: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=300&auto=format&fit=crop' },
+      { city: 'Tokyo', name: 'Shimokitazawa', tag: 'Culture', desc: 'A bohemian neighborhood famous for vintage clothing boutiques, independent record stores, and indie cafes.', img: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=300&auto=format&fit=crop' }
    ];
 
    return{tab,weatherHk,weatherMo,weatherTyo,countText,days,selDay,rateCad,rateMop,e,cats,pays,records,addRec,delRec,catIcon,totalExpense,spots,introTab,attractionDetails};
