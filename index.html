@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-<title>HK, Macau & Tokyo Trip</title>
+<title>HK & Macau Trip</title>
 
 <!-- --- 📱 App Icons --- -->
-<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/kerryraquel/Asia-Trip-2026/c5cbc4bbcb0b0f6069a012669df4c39bffe3f3bc/app%20icon%20tokyo.png">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kerryraquel/Asia-Trip-2026/c5cbc4bbcb0b0f6069a012669df4c39bffe3f3bc/app%20icon%20tokyo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/kerryraquel/Travel-Image/f35a8a77cecf5f62393862e8c8a8c85a4cd7ca8b/IMG_0264.jpeg">
+<link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/kerryraquel/Travel-Image/f35a8a77cecf5f62393862e8c8a8c85a4cd7ca8b/IMG_0264.jpeg">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -34,7 +34,7 @@ body {
 
 /* --- Background --- */
 .app-bg {
-  background-image: url('https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?q=80&w=1000&auto=format&fit=crop');
+  background-image: url('https://raw.githubusercontent.com/kerryraquel/Travel-Image/ea49ec6ae726f671fddd28f568e116903763d2f7/IMG_0267.jpeg');
   background-size: cover;
   background-position: center bottom;
   position: fixed;
@@ -43,9 +43,9 @@ body {
 }
 
 .app-overlay {
-  background: linear-gradient(to bottom, rgba(241, 245, 249, 0.2) 0%, rgba(241, 245, 249, 0.5) 100%);
+  background: linear-gradient(to bottom, rgba(241, 245, 249, 0.3) 0%, rgba(241, 245, 249, 0.6) 100%);
   position: fixed; inset: 0; z-index: -1;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
 }
 
 /* --- Common Components --- */
@@ -199,10 +199,10 @@ body {
     <!-- Header -->
     <header class="flex justify-between items-start mb-6">
       <div class="drop-shadow-md pt-1">
-        <h1 class="text-xl font-black text-slate-800 tracking-tight leading-tight" style="text-shadow: 0 2px 4px rgba(255,255,255,0.8);">HK, Macau & Tokyo<br>Ultimate Trip</h1>
+        <h1 class="text-xl font-black text-slate-800 tracking-tight leading-tight" style="text-shadow: 0 2px 4px rgba(255,255,255,0.8);">HK & Macau Trip<br>Sep 20 - Sep 25 / 港澳之旅</h1>
       </div>
       
-      <!-- Weather Module (Supporting 3 cities) -->
+      <!-- Weather Module (Supporting HK & Macau) -->
       <div class="flex flex-col gap-2">
         <!-- HK Weather -->
         <div class="flex items-center justify-end gap-2 text-slate-800 bg-white/60 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm w-28">
@@ -220,15 +220,6 @@ body {
             <div class="font-bold text-sm leading-none">{{ weatherMo.temp }}°C</div>
           </div>
           <i :class="[weatherMo.icon, 'text-lg text-emerald-500 w-5 text-center']"></i>
-        </div>
-
-        <!-- Tokyo Weather -->
-        <div class="flex items-center justify-end gap-2 text-slate-800 bg-white/60 backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm w-28">
-          <div class="text-right flex-1">
-            <div class="text-[10px] font-bold text-slate-500">TYO</div>
-            <div class="font-bold text-sm leading-none">{{ weatherTyo.temp }}°C</div>
-          </div>
-          <i :class="[weatherTyo.icon, 'text-lg text-blue-500 w-5 text-center']"></i>
         </div>
       </div>
     </header>
@@ -291,7 +282,7 @@ body {
                     <i v-if="p.isRelax" class="fa-solid fa-spa text-pink-500 mr-1 text-xs"></i>
                     <i v-if="p.isBook" class="fa-solid fa-book text-violet-500 mr-1 text-xs"></i>
                     {{ p.title }}
-                    <span v-if="p.hasTicket" class="ticket-badge"><i class="fa-solid fa-check"></i> Booked</span>
+                    <span v-if="p.hasTicket" class="ticket-badge"><i class="fa-solid fa-check"></i> Booked / 已預訂</span>
                   </span>
                 </div>
                 
@@ -321,63 +312,34 @@ body {
 
       <!-- ✈ Flights (FLIGHT) -->
       <section v-if="tab==='flight'" key="flight">
-        <h2 class="text-xl font-bold text-slate-800 mb-4 px-1 drop-shadow-sm" style="text-shadow: 0 1px 2px rgba(255,255,255,0.8);">My Flights</h2>
+        <h2 class="text-xl font-bold text-slate-800 mb-4 px-1 drop-shadow-sm" style="text-shadow: 0 1px 2px rgba(255,255,255,0.8);">My Flights / 航班資訊</h2>
         
         <div class="flight-card-minimal">
           <div class="flight-header">
             <div class="airline-tag">
-              <i class="fa-solid fa-plane-departure"></i> Macau Air NX862
+              <i class="fa-solid fa-plane-departure"></i> Arrival to HK / 抵達香港
             </div>
-            <div class="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded">Sep 25</div>
+            <div class="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded">Sep 20</div>
           </div>
           <div class="flight-body">
             <div>
-              <div class="flight-time">09:30</div>
-              <div class="flight-city">Macau MFM</div>
+              <div class="flight-time">--:--</div>
+              <div class="flight-city">Origin / 出發地</div>
             </div>
             <div class="flight-route">
               <div class="route-line">
                 <i class="fa-solid fa-plane route-plane"></i>
               </div>
-              <div class="text-[10px] text-slate-400 mt-3">5h 30m</div>
+              <div class="text-[10px] text-slate-400 mt-3">Direct</div>
             </div>
             <div class="text-right">
-              <div class="flight-time">15:00</div>
-              <div class="flight-city">Tokyo NRT</div>
+              <div class="flight-time">--:--</div>
+              <div class="flight-city">Hong Kong HKG / 香港</div>
             </div>
           </div>
           <div class="flight-footer">
-            <span>Class: Economy (Airbus A320)</span>
-            <span>Terminal: T2</span>
-          </div>
-        </div>
-
-        <div class="flight-card-minimal">
-          <div class="flight-header">
-            <div class="airline-tag">
-              <i class="fa-solid fa-plane-arrival"></i> Macau Air NX861
-            </div>
-            <div class="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded">Sep 30</div>
-          </div>
-          <div class="flight-body">
-            <div>
-              <div class="flight-time">16:00</div>
-              <div class="flight-city">Tokyo NRT</div>
-            </div>
-            <div class="flight-route">
-              <div class="route-line">
-                <i class="fa-solid fa-plane route-plane fa-rotate-180"></i>
-              </div>
-              <div class="text-[10px] text-slate-400 mt-3">4h 05m</div>
-            </div>
-            <div class="text-right">
-              <div class="flight-time">20:05</div>
-              <div class="flight-city">Macau MFM</div>
-            </div>
-          </div>
-          <div class="flight-footer">
-            <span>Class: Economy (Airbus A320)</span>
-            <span>Terminal: T2</span>
+            <span>Class / 艙等: Economy</span>
+            <span>Terminal / 航廈: T1</span>
           </div>
         </div>
       </section>
@@ -389,8 +351,8 @@ body {
         <div class="glass-card bg-gradient-to-r from-blue-600 to-indigo-600 !border-0 text-white mb-4 shadow-lg shadow-blue-200">
           <div class="flex justify-between items-start">
             <div>
-              <div class="text-xs font-bold opacity-80 mb-1 tracking-wider uppercase">Total Expenses (JPY)</div>
-              <div class="text-3xl font-black tracking-tight">¥ {{ totalExpense.toFixed(2) }}</div>
+              <div class="text-xs font-bold opacity-80 mb-1 tracking-wider uppercase">Total Expenses (HKD/MOP) / 總支出</div>
+              <div class="text-3xl font-black tracking-tight">$ {{ totalExpense.toFixed(2) }}</div>
             </div>
             <div class="bg-white/20 p-2 rounded-lg backdrop-blur-sm">
               <i class="fa-solid fa-wallet text-xl"></i>
@@ -398,16 +360,15 @@ body {
           </div>
           <div class="mt-2 pt-2 border-t border-white/20 text-sm font-bold opacity-90 flex flex-col gap-1">
             <span>≈ CAD ${{ (totalExpense * rateCad).toFixed(2) }}</span>
-            <span>≈ MOP ${{ (totalExpense * rateMop).toFixed(1) }}</span>
           </div>
         </div>
 
         <div class="glass-card">
-          <h2 class="text-lg font-bold text-slate-800 mb-4">Add Expense</h2>
+          <h2 class="text-lg font-bold text-slate-800 mb-4">Add Expense / 新增支出</h2>
           
           <div class="relative mb-4 flex flex-col">
             <div class="relative">
-              <span class="absolute left-3 top-4 text-slate-400 font-bold">¥</span>
+              <span class="absolute left-3 top-4 text-slate-400 font-bold">$</span>
               <input v-model="e.amount" type="number" inputmode="decimal" placeholder="0.00" 
                      class="w-full bg-white border border-slate-200 rounded-xl py-4 pl-8 pr-24 text-2xl font-bold text-slate-800 focus:ring-2 focus:ring-blue-500 outline-none">
               
@@ -415,9 +376,6 @@ body {
               <div class="absolute right-3 top-2 flex flex-col gap-1 items-end">
                 <div class="text-[10px] font-bold text-rose-600 bg-rose-50 px-1.5 py-0.5 rounded">
                   ≈ CAD ${{ (Number(e.amount)*rateCad || 0).toFixed(2) }}
-                </div>
-                <div class="text-[10px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded">
-                  ≈ MOP ${{ (Number(e.amount)*rateMop || 0).toFixed(1) }}
                 </div>
               </div>
             </div>
@@ -441,7 +399,7 @@ body {
           </div>
 
           <div class="flex gap-2">
-            <input v-model="e.item" placeholder="Item description" 
+            <input v-model="e.item" placeholder="Item description / 項目說明" 
                    class="flex-1 bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-blue-500 outline-none">
             <button @click="addRec" class="bg-blue-600 text-white rounded-xl px-5 font-bold shadow-lg shadow-blue-200 active:scale-95 transition-transform">
               <i class="fa-solid fa-plus"></i>
@@ -450,7 +408,7 @@ body {
         </div>
 
         <div v-if="records.length" class="pb-4">
-          <h3 class="text-xs font-bold text-slate-600 uppercase tracking-wider mb-2 px-1 bg-white/50 inline-block rounded">Records</h3>
+          <h3 class="text-xs font-bold text-slate-600 uppercase tracking-wider mb-2 px-1 bg-white/50 inline-block rounded">Records / 記帳明細</h3>
           <transition-group name="list" tag="div" class="space-y-2">
             <div v-for="r in records" :key="r.id" class="bg-white/95 border border-slate-100 rounded-xl p-3 flex justify-between items-center shadow-sm group relative overflow-hidden">
               <div class="flex items-center gap-3">
@@ -464,9 +422,8 @@ body {
               </div>
               <div class="flex items-center gap-3">
                 <div class="text-right flex flex-col justify-center">
-                  <div class="font-bold text-slate-800">¥{{ r.amount }}</div>
+                  <div class="font-bold text-slate-800">${{ r.amount }}</div>
                   <div class="text-[10px] text-rose-500 font-bold leading-tight">CAD ${{ (r.amount*rateCad).toFixed(2) }}</div>
-                  <div class="text-[10px] text-blue-500 font-bold leading-tight">MOP ${{ (r.amount*rateMop).toFixed(1) }}</div>
                 </div>
                 <button type="button" @click="delRec(r.id)" class="w-8 h-8 flex items-center justify-center text-slate-300 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors active:bg-red-100">
                   <i class="fa-solid fa-trash-can text-sm"></i>
@@ -480,20 +437,20 @@ body {
       <!-- ℹ Info (INFO) -->
       <section v-if="tab==='info'" key="info">
         <div class="glass-card">
-          <h2 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Trip Overview & Info</h2>
+          <h2 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Trip Overview & Info / 行程總覽與資訊</h2>
           
           <!-- Hong Kong Card -->
           <div class="bg-white border border-slate-100 p-4 rounded-xl mb-3 shadow-sm relative overflow-hidden">
             <div class="absolute right-0 top-0 p-3 opacity-5 text-6xl pointer-events-none"><i class="fa-solid fa-city"></i></div>
             <div class="relative z-10">
               <div class="flex justify-between items-center mb-2">
-                <h3 class="font-bold text-lg text-slate-800">Hong Kong</h3>
+                <h3 class="font-bold text-lg text-slate-800">Hong Kong / 香港</h3>
                 <span class="text-[10px] font-bold bg-blue-50 text-blue-600 px-2 py-1 rounded-full">Sep 20 - Sep 23</span>
               </div>
               <div class="text-sm text-slate-600 mb-1 flex items-center">
                 <i class="fa-solid fa-bed mr-2 text-slate-400"></i> 華美達海景酒店 (Ramada Hong Kong Harbour View)
               </div>
-              <div class="text-xs text-emerald-500 pl-6 font-bold"><i class="fa-solid fa-check"></i> Confirmed</div>
+              <div class="text-xs text-emerald-500 pl-6 font-bold"><i class="fa-solid fa-check"></i> Confirmed / 已確認</div>
             </div>
           </div>
 
@@ -502,29 +459,14 @@ body {
             <div class="absolute right-0 top-0 p-3 opacity-5 text-6xl pointer-events-none"><i class="fa-brands fa-fort-awesome"></i></div>
             <div class="relative z-10">
               <div class="flex justify-between items-center mb-2">
-                <h3 class="font-bold text-lg text-slate-800">Macau</h3>
+                <h3 class="font-bold text-lg text-slate-800">Macau / 澳門</h3>
                 <span class="text-[10px] font-bold bg-emerald-50 text-emerald-600 px-2 py-1 rounded-full">Sep 23 - Sep 25</span>
               </div>
               <div class="text-sm text-slate-600 mb-1 flex items-center">
                 <i class="fa-solid fa-bed mr-2 text-slate-400"></i> 十月初五街大本營
               </div>
-              <div class="text-xs text-emerald-500 pl-6 font-bold"><i class="fa-solid fa-check"></i> Confirmed</div>
+              <div class="text-xs text-emerald-500 pl-6 font-bold"><i class="fa-solid fa-check"></i> Confirmed / 已確認</div>
             </div>
-          </div>
-
-          <!-- Tokyo Card -->
-          <div class="bg-white border border-slate-100 p-4 rounded-xl mb-4 shadow-sm relative overflow-hidden">
-             <div class="absolute right-0 top-0 p-3 opacity-5 text-6xl pointer-events-none"><i class="fa-brands fa-pagelines"></i></div>
-             <div class="relative z-10">
-               <div class="flex justify-between items-center mb-2">
-                 <h3 class="font-bold text-lg text-slate-800">Tokyo</h3>
-                 <span class="text-[10px] font-bold bg-indigo-50 text-indigo-500 px-2 py-1 rounded-full">Sep 25 - Sep 30</span>
-               </div>
-               <div class="text-sm text-slate-600 mb-1 flex items-center">
-                 <i class="fa-solid fa-bed mr-2 text-slate-400"></i> 未定 (TBD)
-               </div>
-               <div class="text-xs text-amber-500 pl-6 font-bold"><i class="fa-solid fa-clock"></i> Pending Selection</div>
-             </div>
           </div>
 
         </div>
@@ -532,22 +474,18 @@ body {
         <!-- City Impressions -->
         <div class="glass-card mt-4">
           <h2 class="text-lg font-bold text-slate-800 mb-3 flex items-center">
-            <i class="fa-solid fa-book-open-reader text-emerald-500 mr-2"></i> City Impressions
+            <i class="fa-solid fa-book-open-reader text-emerald-500 mr-2"></i> City Impressions / 城市印象
           </h2>
           
           <!-- Tabs -->
           <div class="flex p-1 bg-slate-100 rounded-xl mb-4">
             <button @click="introTab='hk'" 
                     :class="['flex-1 py-2 text-sm font-bold rounded-lg transition-all', introTab==='hk' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-400']">
-              Hong Kong
+              Hong Kong / 香港
             </button>
             <button @click="introTab='macau'" 
                     :class="['flex-1 py-2 text-sm font-bold rounded-lg transition-all', introTab==='macau' ? 'bg-white text-emerald-600 shadow-sm' : 'text-slate-400']">
-              Macau
-            </button>
-            <button @click="introTab='tokyo'" 
-                    :class="['flex-1 py-2 text-sm font-bold rounded-lg transition-all', introTab==='tokyo' ? 'bg-white text-indigo-600 shadow-sm' : 'text-slate-400']">
-              Tokyo
+              Macau / 澳門
             </button>
           </div>
 
@@ -555,18 +493,18 @@ body {
           <div v-if="introTab==='hk'" class="animate-fade-in">
              <div class="relative bg-blue-50/50 p-4 rounded-xl border border-blue-100 mb-3">
                 <i class="fa-solid fa-ship absolute right-2 bottom-2 text-6xl text-blue-200/30"></i>
-                <h3 class="font-black text-xl text-slate-800 mb-1">Pearl of the Orient</h3>
+                <h3 class="font-black text-xl text-slate-800 mb-1">Pearl of the Orient / 東方之珠</h3>
                 <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                  A dynamic metropolis where East meets West. Experience the nostalgia of Ding Ding trams, world-class skylines, and authentic local Dai Pai Dongs hidden in the alleys.
+                  A dynamic metropolis where East meets West. Experience the nostalgia of Ding Ding trams, world-class skylines, and authentic local Dai Pai Dongs hidden in the alleys. / 東西文化交融的動感大都會。體驗叮叮車的懷舊風情、世界級的天際線，以及隱藏在巷弄中的地道大排檔。
                 </p>
                 <div class="space-y-2">
                   <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
-                    <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded">Must Do</span>
-                    <span>Victoria Peak, Star Ferry, Tai O</span>
+                    <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded">Must Do / 必做</span>
+                    <span>Victoria Peak, Star Ferry, Tai O / 太平山頂、天星小輪、大澳</span>
                   </div>
                   <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
-                    <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded">Food</span>
-                    <span>Dim Sum, Milk Tea, Wonton Noodles</span>
+                    <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded">Food / 美食</span>
+                    <span>Dim Sum, Milk Tea, Wonton Noodles / 飲茶、奶茶、雲吞麵</span>
                   </div>
                 </div>
              </div>
@@ -576,39 +514,18 @@ body {
           <div v-if="introTab==='macau'" class="animate-fade-in">
              <div class="relative bg-emerald-50/50 p-4 rounded-xl border border-emerald-100 mb-3">
                 <i class="fa-brands fa-fort-awesome absolute right-2 bottom-2 text-6xl text-emerald-200/30"></i>
-                <h3 class="font-black text-xl text-slate-800 mb-1">Portuguese Heritage</h3>
+                <h3 class="font-black text-xl text-slate-800 mb-1">Portuguese Heritage / 葡式風情</h3>
                 <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                  A perfect blend of European architecture and Chinese culture. Stroll through cobblestone streets, enjoy slow living in Coloane, and experience the dazzling Cotai Strip & Taipa Seaside Promenade.
+                  A perfect blend of European architecture and Chinese culture. Stroll through cobblestone streets, enjoy slow living in Coloane, and experience the dazzling Cotai Strip & Taipa Seaside Promenade. / 歐洲建築與中國文化的完美結合。漫步於鵝卵石街道，在路環享受慢活時光，並體驗璀璨的金光大道與氹仔海濱休憩區。
                 </p>
                 <div class="space-y-2">
                   <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
-                    <span class="bg-emerald-100 text-emerald-600 px-2 py-1 rounded">Must Do</span>
-                    <span>St. Paul's, Mount Fortress, Taipa Seaside Promenade</span>
+                    <span class="bg-emerald-100 text-emerald-600 px-2 py-1 rounded">Must Do / 必做</span>
+                    <span>St. Paul's, Mount Fortress, Taipa Seaside Promenade / 大三巴、大炮台、氹仔海濱休憩區</span>
                   </div>
                   <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
-                    <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded">Food</span>
-                    <span>Portuguese Tarts, Pork Chop Bun, Almond Dessert</span>
-                  </div>
-                </div>
-             </div>
-          </div>
-
-          <!-- Tokyo Content -->
-          <div v-if="introTab==='tokyo'" class="animate-fade-in">
-             <div class="relative bg-indigo-50/50 p-4 rounded-xl border border-indigo-100 mb-3">
-                <i class="fa-solid fa-torii-gate absolute right-2 bottom-2 text-6xl text-indigo-200/30"></i>
-                <h3 class="font-black text-xl text-slate-800 mb-1">Neon & Tradition</h3>
-                <p class="text-sm text-slate-600 leading-relaxed mb-3">
-                  Tokyo seamlessly intertwines ultra-modern tech with historic shrines. Explore the vibrant youth culture in Harajuku and serene coastal vibes in nearby Kamakura.
-                </p>
-                <div class="space-y-2">
-                  <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
-                    <span class="bg-indigo-100 text-indigo-600 px-2 py-1 rounded">Must Do</span>
-                    <span>Asakusa, Shimokitazawa, Tokyo Skytree</span>
-                  </div>
-                  <div class="flex items-center gap-2 text-xs font-bold text-slate-700">
-                    <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded">Food</span>
-                    <span>Wagyu Beef, Ramen, Soup Curry</span>
+                    <span class="bg-amber-100 text-amber-600 px-2 py-1 rounded">Food / 美食</span>
+                    <span>Portuguese Tarts, Pork Chop Bun, Almond Dessert / 葡撻、豬扒包、杏仁露</span>
                   </div>
                 </div>
              </div>
@@ -618,24 +535,24 @@ body {
         <!-- Attraction Guide -->
         <div class="glass-card mt-4">
           <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center">
-            <i class="fa-solid fa-circle-info text-blue-500 mr-2"></i> Attraction Guide
+            <i class="fa-solid fa-circle-info text-blue-500 mr-2"></i> Attraction Guide / 景點指南
           </h2>
           
           <div class="space-y-3">
-            <div v-for="item in attractionDetails" :key="item.name" class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm transition-transform active:scale-[0.99]">
-               <!-- Header -->
-               <div class="flex justify-between items-start mb-2">
-                 <div class="flex items-center gap-2">
-                   <span :class="['text-[10px] px-1.5 py-0.5 rounded border font-bold', 
-                      item.city==='HK' ? 'text-blue-500 border-blue-200 bg-blue-50' : 
-                      item.city==='Macau' ? 'text-emerald-500 border-emerald-200 bg-emerald-50' : 
-                      'text-indigo-500 border-indigo-200 bg-indigo-50']">{{ item.city }}</span>
-                   <h3 class="font-bold text-slate-800 text-base">{{ item.name }}</h3>
+            <div v-for="item in attractionDetails" :key="item.name" class="bg-white p-4 rounded-xl border border-slate-100 shadow-sm transition-transform active:scale-[0.99] flex gap-3 items-center">
+               <img :src="item.img" :alt="item.name" class="w-16 h-16 rounded-lg object-cover flex-shrink-0">
+               <div class="flex-1">
+                 <div class="flex items-center justify-between mb-1">
+                   <div class="flex items-center gap-2">
+                     <span :class="['text-[10px] px-1.5 py-0.5 rounded border font-bold', 
+                        item.city==='HK' ? 'text-blue-500 border-blue-200 bg-blue-50' : 
+                        'text-emerald-500 border-emerald-200 bg-emerald-50']">{{ item.city }}</span>
+                     <h3 class="font-bold text-slate-800 text-sm">{{ item.name }}</h3>
+                   </div>
+                   <span class="text-[10px] text-slate-400 border border-slate-200 px-1.5 py-0.5 rounded">{{ item.tag }}</span>
                  </div>
-                 <span class="text-[10px] text-slate-400 border border-slate-200 px-1.5 py-0.5 rounded">{{ item.tag }}</span>
+                 <p class="text-xs text-slate-500 leading-relaxed">{{ item.desc }}</p>
                </div>
-               <!-- Description -->
-               <p class="text-xs text-slate-500 leading-relaxed text-justify">{{ item.desc }}</p>
             </div>
           </div>
         </div>
@@ -643,12 +560,12 @@ body {
         <!-- Quick Directory -->
         <div class="glass-card mt-4">
           <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center">
-            <i class="fa-solid fa-map text-blue-500 mr-2"></i> Quick Directory
+            <i class="fa-solid fa-map text-blue-500 mr-2"></i> Quick Directory / 快速導航
           </h2>
 
           <!-- HK Section -->
           <div class="mb-4">
-            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 pl-1">Hong Kong</h3>
+            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 pl-1">Hong Kong / 香港</h3>
             <div class="grid grid-cols-2 gap-3">
               <a v-for="spot in spots.hk" :key="spot.name" 
                  :href="'https://www.google.com/maps/search/?api=1&query=' + spot.name" target="_blank"
@@ -668,35 +585,14 @@ body {
           </div>
 
           <!-- Macau Section -->
-          <div class="mb-4">
-            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 pl-1">Macau</h3>
+          <div>
+            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 pl-1">Macau / 澳門</h3>
             <div class="grid grid-cols-2 gap-3">
               <a v-for="spot in spots.macau" :key="spot.name" 
                  :href="'https://www.google.com/maps/search/?api=1&query=' + spot.name" target="_blank"
                  class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
                   <div class="flex items-start justify-between mb-2">
                     <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center text-sm">
-                      <i :class="['fa-solid', spot.icon]"></i>
-                    </div>
-                    <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded">{{ spot.tag }}</span>
-                  </div>
-                  <div>
-                    <div class="font-bold text-slate-800 text-sm leading-tight mb-1">{{ spot.name }}</div>
-                    <div class="text-[10px] text-slate-400 leading-tight">{{ spot.note }}</div>
-                  </div>
-              </a>
-            </div>
-          </div>
-
-          <!-- Tokyo Section -->
-          <div>
-            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-wider mb-2 pl-1">Tokyo</h3>
-            <div class="grid grid-cols-2 gap-3">
-              <a v-for="spot in spots.tokyo" :key="spot.name" 
-                 :href="'https://www.google.com/maps/search/?api=1&query=' + spot.name" target="_blank"
-                 class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between h-full">
-                  <div class="flex items-start justify-between mb-2">
-                    <div class="w-8 h-8 rounded-full bg-indigo-50 text-indigo-500 flex items-center justify-center text-sm">
                       <i :class="['fa-solid', spot.icon]"></i>
                     </div>
                     <span class="text-[10px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded">{{ spot.tag }}</span>
@@ -742,10 +638,9 @@ createApp({
    const tab=ref('plan');
    const introTab=ref('hk'); 
    
-   // --- Weather (HK, Macau, Tokyo) ---
+   // --- Weather (HK, Macau) ---
    const weatherHk=ref({temp:'--',desc:'Loading',icon:'fa-solid fa-spinner fa-spin'});
    const weatherMo=ref({temp:'--',desc:'Loading',icon:'fa-solid fa-spinner fa-spin'});
-   const weatherTyo=ref({temp:'--',desc:'Loading',icon:'fa-solid fa-spinner fa-spin'});
    
    const getWeatherIcon = (code) => {
       if(code === 0) return 'fa-solid fa-sun text-orange-500';
@@ -774,110 +669,73 @@ createApp({
    const updateAllWeather = async () => {
       weatherHk.value = await fetchCityWeather(22.3193, 114.1694);
       weatherMo.value = await fetchCityWeather(22.1987, 113.5439);
-      weatherTyo.value = await fetchCityWeather(35.6762, 139.6503);
    };
 
    onMounted(()=>{
-     updateAllWeather();
-     setInterval(updateAllWeather, 3600000);
+      updateAllWeather();
+      setInterval(updateAllWeather, 3600000);
    });
 
    // --- Countdown ---
    const start=new Date('2026-09-20T00:00:00');
-   const end=new Date('2026-09-30T23:59:59');
+   const end=new Date('2026-09-25T23:59:59');
    const countText=computed(()=>{
      const now=new Date();
      const diffStart=Math.ceil((start-now)/(1000*60*60*24));
      const diffTravel=Math.floor((now-start)/(1000*60*60*24))+1;
-     if(now<start)return`${diffStart} Days until trip!`;
-     if(now>=start&&now<=end)return`Trip in progress · Day ${diffTravel}`;
-     return`Trip has ended`;
+     if(now<start)return`${diffStart} Days until trip! / 距離旅程還有 ${diffStart} 天！`;
+     if(now>=start&&now<=end)return`Trip in progress · Day ${diffTravel} / 旅程進行中 · 第 ${diffTravel} 天`;
+     return`Trip has ended / 旅行已結束`;
    });
 
-   // --- Itinerary Data (11 Days) ---
+   // --- Itinerary Data (Days 1-5 for HK & Macau) ---
    const days=ref([
-     {day:'Day 1', weekDay:'SUN', display:'20',date:'Sep 20',city:'Hong Kong',plans:[
-       {time:'10:00',title:'Tai Kwun & Pottinger Street',note:'Explore the historical architecture and heritage of Central.', isArch: true, transport:'<span class="text-slate-400">Arrive via:</span> <i class="fa-solid fa-train"></i> Airport Express'},
-       {time:'14:00',title:'Ding Ding Tram & Seafood St',note:'Ride the iconic double-decker tram and walk through the traditional markets.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-tram"></i> Tram'},
-       {time:'18:00',title:'Victoria Harbour Night View',note:'Take the Star Ferry and enjoy the million-dollar skyline from the Peak.', isNight: true, transport:'<span class="text-slate-400">Cross Harbour:</span> <i class="fa-solid fa-ship"></i> Star Ferry & Peak Tram'}
+     {day:'Day 1', weekDay:'SUN', display:'20',date:'Sep 20',city:'Hong Kong / 香港',plans:[
+       {time:'10:00',title:'Tai Kwun & Pottinger Street / 大館與石板街',note:'Explore the historical architecture and heritage of Central. / 探索中環的歷史建築與文化遺產。', isArch: true, transport:'<span class="text-slate-400">Arrive via / 抵達:</span> <i class="fa-solid fa-train"></i> Airport Express / 機場快線'},
+       {time:'14:00',title:'Ding Ding Tram & Seafood St / 叮叮車與海味街',note:'Ride the iconic double-decker tram and walk through the traditional markets. / 搭乘標誌性雙層叮叮車，漫步傳統市場。', isWalk: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-train-tram"></i> Tram / 叮叮車'},
+       {time:'18:00',title:'Victoria Harbour Night View / 維港夜景',note:'Take the Star Ferry and enjoy the million-dollar skyline from the Peak. / 搭乘天星小輪，從山頂欣賞百萬夜景。', isNight: true, transport:'<span class="text-slate-400">Cross Harbour / 跨海:</span> <i class="fa-solid fa-ship"></i> Star Ferry & Peak Tram / 天星小輪與山頂纜車'}
      ]},
-     {day:'Day 2', weekDay:'MON', display:'21',date:'Sep 21',city:'Hong Kong',plans:[
-       {time:'09:00',title:'Lin Heung Tea House',note:'Traditional push-cart Dim Sum experience.', isFood: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> MTR (15 mins)'},
-       {time:'13:00',title:'Sham Shui Po Local Market',note:'Explore electronic markets, fabric streets, and authentic local vibes.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> MTR (15 mins)'},
-       {time:'19:00',title:'Dai Pai Dong Dinner',note:'Experience the vibrant "wok hei" street food culture.', isFood: true, transport:'<span class="text-slate-400">Location:</span> Shek Kip Mei / SSP'}
+     {day:'Day 2', weekDay:'MON', display:'21',date:'Sep 21',city:'Hong Kong / 香港',plans:[
+       {time:'09:00',title:'Lin Heung Tea House / 蓮香茶居',note:'Traditional push-cart Dim Sum experience. / 體驗傳統推車點心。', isFood: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-train-subway"></i> MTR (15 mins) / 地鐵'},
+       {time:'13:00',title:'Sham Shui Po Local Market / 深水埗在地市場',note:'Explore electronic markets, fabric streets, and authentic local vibes. / 探索電子市場、布街與地道在地風情。', isWalk: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-train-subway"></i> MTR (15 mins) / 地鐵'},
+       {time:'19:00',title:'Dai Pai Dong Dinner / 大排檔晚餐',note:'Experience the vibrant "wok hei" street food culture. / 體驗充滿鑊氣的街頭美食文化。', isFood: true, transport:'<span class="text-slate-400">Location / 地點:</span> Shek Kip Mei / SSP / 石硲尾 / 深水埗'}
      ]},
-     {day:'Day 3', weekDay:'TUE', display:'22',date:'Sep 22',city:'Hong Kong',plans:[
-       {time:'10:00',title:'Tai O Fishing Village',note:'Oldest fishing village in HK featuring stilt houses.', isArch: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-bus"></i> Bus from Tung Chung'},
-       {time:'14:00',title:'Boat Ride & Village Walk',note:'Explore the waterways and search for pink dolphins.', isWalk: true, isFerry: true, transport:'<span class="text-slate-400">Activity:</span> <i class="fa-solid fa-ship"></i> Small Boat Tour'},
-       {time:'18:00',title:'West Kowloon Sunset',note:'Relax on the grass promenade and watch the sunset.', isRelax: true, isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-bus"></i> Bus / MTR'}
+     {day:'Day 3', weekDay:'TUE', display:'22',date:'Sep 22',city:'Hong Kong / 香港',plans:[
+       {time:'10:00',title:'Tai O Fishing Village / 大澳漁村',note:'Oldest fishing village in HK featuring stilt houses. / 香港最古老的棚屋漁村。', isArch: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-bus"></i> Bus from Tung Chung / 東涌巴士'},
+       {time:'14:00',title:'Boat Ride & Village Walk / 遊船與漁村漫步',note:'Explore the waterways and search for pink dolphins. / 探索水上水道並尋找中華白海豚。', isWalk: true, isFerry: true, transport:'<span class="text-slate-400">Activity / 活動:</span> <i class="fa-solid fa-ship"></i> Small Boat Tour / 小艇導覽'},
+       {time:'18:00',title:'West Kowloon Sunset / 西九夕陽',note:'Relax on the grass promenade and watch the sunset. / 在草地長廊放鬆並欣賞夕陽。', isRelax: true, isNight: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-bus"></i> Bus / MTR / 巴士 / 地鐵'}
      ]},
-     {day:'Day 4', weekDay:'WED', display:'23',date:'Sep 23',city:'HK -> Macau',plans:[
-       {time:'10:00',title:'Kowloon Walled City Park',note:'Explore the rich history of the old Walled City.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> MTR (20 mins)'},
-       {time:'14:00',title:'Travel to Macau',note:'Cross the sea via HZMB or TurboJET.', isFerry: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-bus"></i> Golden Bus (1.5 hours)'},
-       {time:'17:30',title:'Old City to St. Paul\'s',note:'Walk from Rua de Cinco de Outubro via Senado Square to the Ruins of St. Paul\'s.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'},
-       {time:'18:30',title:'Mount Fortress',note:'Enjoy a panoramic view of the Macau peninsula at sunset.', isArch: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'},
-       {time:'19:00',title:'Rua Nova de S. Lázaro',note:'Stroll through the mint-green and yellow Portuguese architectures.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'},
-       {time:'19:30',title:'ALBERGUE 1601 Dinner',note:'Authentic Portuguese cuisine under old camphor trees in St. Lazarus district.', isFood: true, hasTicket: true, transport:'<span class="text-slate-400">Location:</span> Albergue SCM'},
-       {time:'21:30',title:'Walk Towards Home',note:'Leisurely walk back towards the Inner Harbour area.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'},
-       {time:'22:00',title:'Hang Heong Un Dessert',note:'Famous traditional almond paste and sweet soups.', isFood: true, transport:'<span class="text-slate-400">Location:</span> Travessa do Auto Novo'}
+     {day:'Day 4', weekDay:'WED', display:'23',date:'Sep 23',city:'HK -> Macau / 香港至澳門',plans:[
+       {time:'10:00',title:'Kowloon Walled City Park / 九龍寨城公園',note:'Explore the rich history of the old Walled City. / 探索舊寨城的豐富歷史。', isWalk: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-train-subway"></i> MTR (20 mins) / 地鐵'},
+       {time:'14:00',title:'Travel to Macau / 前往澳門',note:'Cross the sea via HZMB or TurboJET. / 經港珠航或噴射船跨海。', isFerry: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-bus"></i> Golden Bus (1.5 hours) / 港珠澳金巴'},
+       {time:'17:30',title:'Old City to St. Paul\'s / 舊城區至大三巴',note:'Walk from Rua de Cinco de Outubro via Senado Square to the Ruins of St. Paul\'s. / 從十月初五街經議事亭前地步行至大三巴牌坊。', isWalk: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-person-walking"></i> Walk / 步行'},
+       {time:'18:30',title:'Mount Fortress / 大炮台',note:'Enjoy a panoramic view of the Macau peninsula at sunset. / 夕陽下俯瞰澳門半島全景。', isArch: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-person-walking"></i> Walk / 步行'},
+       {time:'19:00',title:'Rua Nova de S. Lázaro / 瘋堂斜巷',note:'Stroll through the mint-green and yellow Portuguese architectures. / 漫步於薄荷綠與黃色的葡式建築間。', isWalk: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-person-walking"></i> Walk / 步行'},
+       {time:'19:30',title:'ALBERGUE 1601 Dinner / 婆仔屋晚餐',note:'Authentic Portuguese cuisine under old camphor trees in St. Lazarus district. / 在聖拉匝路區的老樟樹下享用道地葡國菜。', isFood: true, hasTicket: true, transport:'<span class="text-slate-400">Location / 地點:</span> Albergue SCM / 婆仔屋'},
+       {time:'21:30',title:'Walk Towards Home / 散步返回',note:'Leisurely walk back towards the Inner Harbour area. / 悠閒漫步返回內港一帶。', isWalk: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-person-walking"></i> Walk / 步行'},
+       {time:'22:00',title:'Hang Heong Un Dessert / 恆香棧甜品',note:'Famous traditional almond paste and sweet soups. / 著名的傳統杏仁糊與糖水。', isFood: true, transport:'<span class="text-slate-400">Location / 地點:</span> Travessa do Auto Novo'}
      ]},
-     {day:'Day 5', weekDay:'THU', display:'24',date:'Sep 24',city:'Macau',plans:[
-       {time:'08:30',title:'Nam Peng Cafe',note:'Traditional breakfast with thick-cut char siu egg sandwiches.', isFood: true, transport:'<span class="text-slate-400">Location:</span> Rua de Cinco de Outubro'},
-       {time:'10:00',title:'Taipa Village & Taipa Houses',note:'Stroll along Rua do Cunha and see the mint-green Portuguese villas.', isArch: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-bus"></i> Bus / Taxi'},
-       {time:'12:15',title:'Dim Sum at Regency Art Hotel',note:'Enjoy traditional Cantonese dim sum in an elegant setting.', isFood: true, transport:'<span class="text-slate-400">Location:</span> Regency Art Hotel, Taipa'},
-       {time:'14:15',title:'Coloane & Lord Stow\'s',note:'Quiet coastal village walk and the original Portuguese egg tarts.', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-bus"></i> Bus (20 mins)'},
-       {time:'17:00',title:'Restaurante Kapok (Dinner)',note:'Exquisite Cantonese cuisine and traditional double-boiled soup.', isFood: true, hasTicket: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-taxi"></i> Taxi to Taipa'},
-       {time:'19:00',title:'Wynn Palace Fountain Show',note:'Spectacular musical fountain show at the Performance Lake.', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-taxi"></i> Taxi / Light Rail'},
-       {time:'20:20',title:'Cotai Strip & Taipa Seaside Promenade',note:'Capture the Parisian Tower, shop at the Venetian, and enjoy the waterfront night breeze.', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'}
-     ]},
-     {day:'Day 6', weekDay:'FRI', display:'25',date:'Sep 25',city:'Tokyo (Mid-Autumn)',plans:[
-       {time:'06:30',title:'Check-out & Airport Transfer',note:'Pack up and head to Macau International Airport (MFM).', transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-taxi"></i> Taxi'},
-       {time:'09:30',title:'Flight NX862 to Tokyo',note:'Departing for Tokyo Narita (NRT) Terminal 2 on Airbus A320.', isFerry: false, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-plane"></i> Macau Air'},
-       {time:'15:30',title:'Skyliner to Asakusa',note:'搭乘 Skyliner 直達上野/淺草區塊飯店 Check-in。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Keisei Skyliner'},
-       {time:'17:00',title:'Asakusa Senso-ji & Nakamise',note:'漫步仲見世商店街，品嚐現炸淺草炸肉餅與章魚小丸子，參拜淺草寺。', isArch: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'},
-       {time:'19:30',title:'Asakusa Hoppy Street',note:'【中秋夜飲】在充滿露天煙火氣的居酒屋巷弄坐下，享用燉煮牛筋、炭火串燒與冰涼生啤酒。', isFood: true, isNight: true, transport:'<span class="text-slate-400">Location:</span> Hoppy Street'}
-     ]},
-     {day:'Day 7', weekDay:'SAT', display:'26',date:'Sep 26',city:'Tokyo',plans:[
-       {time:'11:00',title:'Imperial Palace Gaien',note:'悠閒前往皇居外苑，漫步於寬闊護城河與松樹林間。', isArch: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Subway'},
-       {time:'13:00',title:'Daikanyama & Omotesando',note:'漫步 T-Site 蔦屋書店、Monkey Cafe 螺旋木建築，享受手沖咖啡，隨後漫步至原宿/表參道。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Toyoko Line'},
-       {time:'17:00',title:'Shinjuku Shopping & Tokyo Gov Bldg',note:'前往新宿 Isetan / 高島屋購物，登上東京都廳免費展望台看高空夜景。', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> JR Yamanote Line'},
-       {time:'20:00',title:'Omoide Yokocho & Hidden Bar',note:'體驗懷舊串燒，隨後隨性走進新宿巷弄隱密酒吧（Bar BenFiddich 風格）喝一杯威士忌。', isFood: true, isNight: true, transport:'<span class="text-slate-400">Location:</span> Shinjuku Alleyways'}
-     ]},
-     {day:'Day 8', weekDay:'SUN', display:'27',date:'Sep 27',city:'Tokyo',plans:[
-       {time:'11:00',title:'Kappabashi Kitchenware Town',note:'在專業刀具專門店 Cutlery Tsubaya 挑選職人手打高品質日本廚刀。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Subway'},
-       {time:'12:30',title:'Ginza Omakase & Itoya',note:'前往銀座品嚐高性價比午間極鮮 Omakase 壽司盛宴，隨後開逛 Ginza Itoya 與百貨地下街。', isFood: true, hasTicket: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Ginza Line'},
-       {time:'18:00',title:'Tokyo Station Marunouchi & KITTE',note:'登上 KITTE 4F/6F 屋頂庭園，俯瞰百年紅磚車站建築的絕美照明與都市天際線。', isArch: true, isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-person-walking"></i> Walk'},
-       {time:'20:00',title:'Ichiran Ramen Ueno',note:'返回上野前往一蘭拉麵朝聖，滿足在日本吃一蘭的心願。', isFood: true, transport:'<span class="text-slate-400">Location:</span> Ueno Atre'}
-     ]},
-     {day:'Day 9', weekDay:'MON', display:'28',date:'Sep 28',city:'Tokyo',plans:[
-       {time:'11:00',title:'Shimokitazawa Subculture Walk',note:'漫步於古著巷弄、BONUS TRACK 木造社區與幾何街區，午餐品嚐北海道湯咖哩。', isWalk: true, isFood: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Odakyu Line'},
-       {time:'15:00',title:'Tokyo Station Yaesu Whisky & Shopping',note:'前往八重洲地下街 Liquors Hasegawa 尋找 Kilchoman 日本限定版威士忌，並進行藥妝與唐吉訶德掃貨。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> JR Line'},
-       {time:'18:30',title:'Roppongi Hills & Tokyo Tower',note:'近距離欣賞標誌性的東京鐵塔璀璨夜景，隨後與老同學於社區小酒館乾杯。', isNight: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Hibiya Line'}
-     ]},
-     {day:'Day 10', weekDay:'TUE', display:'29',date:'Sep 29',city:'Tokyo',plans:[
-       {time:'11:00',title:'Maxell Aqua Park Shinagawa',note:'欣賞現代聲光影音與水族海洋生物結合的夢幻展演。', isRelax: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> JR Yamanote Line'},
-       {time:'14:00',title:'Kiyosumi-shirakawa Coffee Stroll',note:'在深川公園與東京都現代美術館周邊漫步，隨性享受獨立手沖咖啡與老倉庫文青選品。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train-subway"></i> Oedo Line'},
-       {time:'19:00',title:'Farewell Wagyu / Sukiyaki Dinner',note:'前往銀座或六本木享用頂級和牛燒肉或老牌壽喜燒盛宴，為旅程劃下句點。', isFood: true, hasTicket: true, transport:'<span class="text-slate-400">Location:</span> Ginza / Roppongi'}
-     ]},
-     {day:'Day 11', weekDay:'WED', display:'30',date:'Sep 30',city:'Tokyo -> Home',plans:[
-       {time:'11:00',title:'Check-out & Skyliner to NRT',note:'自然醒辦理退房，於上野搭乘京成 Skyliner 直達成田國際機場。', isWalk: true, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-train"></i> Keisei Skyliner'},
-       {time:'13:00',title:'Narita Airport Duty Free Shopping',note:'逛 Traveler\'s Factory，於 Fa-So-La Duty Free 採買威士忌與獺祭，掃貨 Press Butter Sand 甜點。', isWalk: true, transport:'<span class="text-slate-400">Location:</span> NRT Terminal 2'},
-       {time:'16:00',title:'Flight NX861 to Macau',note:'帶著滿載的手工廚刀、威士忌與戰利品搭機返回。', isFerry: false, transport:'<span class="text-slate-400">Transport:</span> <i class="fa-solid fa-plane"></i> Macau Air'},
-       {time:'20:05',title:'Arrive in Macau',note:'Home sweet home.', transport:'<i class="fa-solid fa-house"></i> Arrive safely'}
+     {day:'Day 5', weekDay:'THU', display:'24',date:'Sep 24',city:'Macau / 澳門',plans:[
+       {time:'08:30',title:'Nam Peng Cafe / 南屏雅敘',note:'Traditional breakfast with thick-cut char siu egg sandwiches. / 傳統早餐，厚切叉燒蛋治。', isFood: true, transport:'<span class="text-slate-400">Location / 地點:</span> Rua de Cinco de Outubro / 十月初五街'},
+       {time:'10:00',title:'Taipa Village & Taipa Houses / 氹仔舊城區與龍環葡韻',note:'Stroll along Rua do Cunha and see the mint-green Portuguese villas. / 漫步於官也街並參觀薄荷綠葡式別墅。', isArch: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-bus"></i> Bus / Taxi / 巴士 / 的士'},
+       {time:'12:15',title:'Dim Sum at Regency Art Hotel / 麗景灣酒店飲茶',note:'Enjoy traditional Cantonese dim sum in an elegant setting. / 在優雅環境中享用傳統粵式點心。', isFood: true, transport:'<span class="text-slate-400">Location / 地點:</span> Regency Art Hotel, Taipa / 麗景灣酒店'},
+       {time:'14:15',title:'Coloane & Lord Stow\'s / 路環與安德魯餅店',note:'Quiet coastal village walk and the original Portuguese egg tarts. / 寧靜的沿海村落散步與原創葡式蛋塔。', isWalk: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-bus"></i> Bus (20 mins) / 巴士'},
+       {time:'17:00',title:'Restaurante Kapok (Dinner) / 木棉葡國餐廳',note:'Exquisite Cantonese cuisine and traditional double-boiled soup. / 精緻粵菜與傳統燉湯。', isFood: true, hasTicket: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-taxi"></i> Taxi to Taipa / 的士往氹仔'},
+       {time:'19:00',title:'Wynn Palace Fountain Show / 永利皇宮音樂噴泉',note:'Spectacular musical fountain show at the Performance Lake. / 表演湖壯觀的音樂噴泉表演。', isNight: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-taxi"></i> Taxi / Light Rail / 的士 / 輕軌'},
+       {time:'20:20',title:'Cotai Strip & Taipa Seaside Promenade / 金光大道與氹仔海濱休憩區',note:'Capture the Parisian Tower, shop at the Venetian, and enjoy the waterfront night breeze. / 拍攝巴黎人鐵塔，逛威尼斯人，享受海濱夜風。', isNight: true, transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-person-walking"></i> Walk / 步行'}
      ]}
    ]);
    const selDay=ref(days.value[0]);
 
    // --- Expenses ---
-   const rateCad=ref(0.0093); // JPY to CAD
-   const rateMop=ref(0.054);  // JPY to MOP
-   const e=ref({amount:'',item:'',cat:'Dining',method:'Credit Card'});
+   const rateCad=ref(0.18); // Local to CAD approximation placeholder
+   const e=ref({amount:'',item:'',cat:'Dining / 餐飲',method:'Credit Card'});
    const records=ref([]);
    const cats=[
-     {icon:'🍜',label:'Dining'},{icon:'🚕',label:'Transport'},
-     {icon:'🏨',label:'Hotel'},{icon:'🎁',label:'Shopping'},{icon:'🎫',label:'Entertain'}
+     {icon:'🍜',label:'Dining / 餐飲'},{icon:'🚕',label:'Transport / 交通'},
+     {icon:'🏨',label:'Hotel / 住宿'},{icon:'🎁',label:'Shopping / 購物'},{icon:'🎫',label:'Entertain / 娛樂'}
    ];
-   const pays=['Cash','Credit Card','Apple Pay','Alipay'];
+   const pays=['Cash / 現金','Credit Card / 信用卡','Apple Pay','Alipay'];
    const catIcon=l=>cats.find(c=>c.label===l)?.icon||'🧾';
    
    const totalExpense = computed(() => {
@@ -892,17 +750,17 @@ createApp({
        amount: amt, 
        id: Date.now() + Math.random().toString(36).substr(2, 9) 
      });
-     localStorage.setItem('hkMoTyoRecords',JSON.stringify(records.value));
+     localStorage.setItem('hkMoRecords',JSON.stringify(records.value));
      e.value.amount=''; e.value.item='';
    };
 
    const delRec = (id) => {
      records.value = records.value.filter(r => r.id !== id);
-     localStorage.setItem('hkMoTyoRecords',JSON.stringify(records.value));
+     localStorage.setItem('hkMoRecords',JSON.stringify(records.value));
    };
    
    onMounted(()=>{
-     const saved = JSON.parse(localStorage.getItem('hkMoTyoRecords')||'[]');
+     const saved = JSON.parse(localStorage.getItem('hkMoRecords')||'[]');
      records.value = saved.map(r => {
         if(!r.id) return { ...r, id: Date.now() + Math.random().toString(36).substr(2, 9) };
         return r;
@@ -912,36 +770,28 @@ createApp({
    // --- Quick Directory Data ---
    const spots = {
      hk: [
-       { name: 'Tai Kwun', tag: 'History', note: 'Restored colonial police station', icon: 'fa-landmark' },
-       { name: 'Victoria Peak', tag: 'Views', note: 'Iconic harbor skyline', icon: 'fa-mountain' },
-       { name: 'Sham Shui Po', tag: 'Local', note: 'Electronic & fabric markets', icon: 'fa-store' },
-       { name: 'Tai O', tag: 'Village', note: 'Stilt houses & fishing culture', icon: 'fa-ship' }
+       { name: 'Tai Kwun', tag: 'History / 歷史', note: 'Restored colonial police station / 修復的殖民地警署', icon: 'fa-landmark' },
+       { name: 'Victoria Peak', tag: 'Views / 景觀', note: 'Iconic harbor skyline / 標誌性海港天際線', icon: 'fa-mountain' },
+       { name: 'Sham Shui Po', tag: 'Local / 在地', note: 'Electronic & fabric markets / 電子與布藝市場', icon: 'fa-store' },
+       { name: 'Tai O', tag: 'Village / 漁村', note: 'Stilt houses & fishing culture / 棚屋與漁業文化', icon: 'fa-ship' }
      ],
      macau: [
-       { name: 'St. Pauls', tag: 'Heritage', note: 'Famous church ruins', icon: 'fa-church' },
-       { name: 'Cotai Strip', tag: 'Casinos', note: 'Luxury resorts & shows', icon: 'fa-gem' },
-       { name: 'Coloane', tag: 'Relax', note: 'Portuguese tarts & coast', icon: 'fa-tree' },
-       { name: 'Taipa Village', tag: 'Food', note: 'Rua do Cunha street food', icon: 'fa-utensils' }
-     ],
-     tokyo: [
-       { name: 'Senso-ji', tag: 'Temple', note: 'Oldest temple in Asakusa', icon: 'fa-torii-gate' },
-       { name: 'Hoppy Street', tag: 'Food', note: 'Asakusa izakaya alley', icon: 'fa-beer-mug-empty' },
-       { name: 'Shimokitazawa', tag: 'Culture', note: 'Vintage and indie cafes', icon: 'fa-record-vinyl' },
-       { name: 'Tsukiji', tag: 'Seafood', note: 'Outer market fresh eats', icon: 'fa-fish' }
+       { name: 'St. Pauls', tag: 'Heritage / 遺產', note: 'Famous church ruins / 著名教堂遺址', icon: 'fa-church' },
+       { name: 'Cotai Strip', tag: 'Casinos / 娛樂', note: 'Luxury resorts & shows / 豪華度假村與表演', icon: 'fa-gem' },
+       { name: 'Coloane', tag: 'Relax / 放鬆', note: 'Portuguese tarts & coast / 葡撻與海岸', icon: 'fa-tree' },
+       { name: 'Taipa Village', tag: 'Food / 美食', note: 'Rua do Cunha street food / 官也街街頭小吃', icon: 'fa-utensils' }
      ]
    };
 
    // --- Attraction Details (Thumbnail Integrated) ---
    const attractionDetails = [
-      { city: 'HK', name: 'Victoria Peak', tag: 'Landmark', desc: 'The highest hill on Hong Kong Island, offering breathtaking panoramic views of Victoria Harbour and the glittering skyscrapers.', img: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=300&auto=format&fit=crop' },
-      { city: 'HK', name: 'Tai O Fishing Village', tag: 'Culture', desc: 'Known as the "Venice of Hong Kong," featuring traditional stilt houses over the water and a deep-rooted fishing heritage.', img: 'https://images.unsplash.com/photo-1542051812891-b064eca0371e?q=80&w=300&auto=format&fit=crop' },
-      { city: 'Macau', name: 'Ruins of St. Paul\'s', tag: 'Heritage', desc: 'The facade of what was originally a 17th-century Portuguese church dedicated to Saint Paul the Apostle, destroyed by fire.', img: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=300&auto=format&fit=crop' },
-      { city: 'Macau', name: 'Taipa Seaside Promenade', tag: 'Views', desc: 'A scenic waterfront walkway along the coast, offering stunning night views of the Cotai Strip and bridges.', img: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=300&auto=format&fit=crop' },
-      { city: 'Tokyo', name: 'Asakusa Senso-ji', tag: 'Culture', desc: 'Tokyo\'s oldest and most significant Buddhist temple, approached via the vibrant Nakamise shopping street and Kaminarimon gate.', img: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?q=80&w=300&auto=format&fit=crop' },
-      { city: 'Tokyo', name: 'Shimokitazawa', tag: 'Culture', desc: 'A bohemian neighborhood famous for vintage clothing boutiques, independent record stores, and indie cafes.', img: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?q=80&w=300&auto=format&fit=crop' }
+      { city: 'HK', name: 'Victoria Peak / 太平山頂', tag: 'Landmark', desc: 'The highest hill on Hong Kong Island, offering breathtaking panoramic views of Victoria Harbour and the glittering skyscrapers. / 香港島最高山峰，提供維多利亞港與璀璨摩天大樓的壯麗全景。', img: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=300&auto=format&fit=crop' },
+      { city: 'HK', name: 'Tai O Fishing Village / 大澳漁村', tag: 'Culture', desc: 'Known as the "Venice of Hong Kong," featuring traditional stilt houses over the water and a deep-rooted fishing heritage. / 被譽為「香港威尼斯」，擁有水上傳統棚屋與深厚的漁業文化傳統。', img: 'https://images.unsplash.com/photo-1542051812891-b064eca0371e?q=80&w=300&auto=format&fit=crop' },
+      { city: 'Macau', name: 'Ruins of St. Paul\'s / 大三巴牌坊', tag: 'Heritage', desc: 'The facade of what was originally a 17th-century Portuguese church dedicated to Saint Paul the Apostle, destroyed by fire. / 原為17世紀聖保祿教堂的正面前壁，因大火焚毀後僅存至今的遺跡。', img: 'https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=300&auto=format&fit=crop' },
+      { city: 'Macau', name: 'Taipa Seaside Promenade / 氹仔海濱休憩區', tag: 'Views', desc: 'A scenic waterfront walkway along the coast, offering stunning night views of the Cotai Strip and bridges. / 沿海岸的風景優美濱海步道，提供金光大道與大橋的迷人夜景。', img: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=300&auto=format&fit=crop' }
    ];
 
-   return{tab,weatherHk,weatherMo,weatherTyo,countText,days,selDay,rateCad,rateMop,e,cats,pays,records,addRec,delRec,catIcon,totalExpense,spots,introTab,attractionDetails};
+   return{tab,weatherHk,weatherMo,countText,days,selDay,rateCad,e,cats,pays,records,addRec,delRec,catIcon,totalExpense,spots,introTab,attractionDetails};
    }
 }).mount('#app');
 </script>
