@@ -1,2 +1,2 @@
 # 2026 Asia Trip
-Hong Kong - Macau - Tokyo
+Hong Kong - Macau
