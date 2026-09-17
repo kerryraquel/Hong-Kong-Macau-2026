@@ -6,8 +6,8 @@
 <title>HK & Macau 5D4N Itinerary / 港澳 5 天 4 夜深度美學與美食終極行程</title>
 
 <!-- --- 📱 App Icons --- -->
-<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/kerryraquel/Hong-Kong-Macau-2026/6ab1a6c82c69d7364fc3923894050d564ebce9c8/app%20icon%20tokyo.png">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kerryraquel/Hong-Kong-Macau-2026/6ab1a6c82c69d7364fc3923894050d564ebce9c8/app%20icon%20tokyo.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://raw.githubusercontent.com/kerryraquel/Travel-Image/c3b2fe040575e525c368120d594c16b5d712e230/IMG_0269.png">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/kerryraquel/Travel-Image/c3b2fe040575e525c368120d594c16b5d712e230/IMG_0269.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
@@ -20,8 +20,8 @@
 :root {
   --primary: #2563eb;
   --bg-color: #f1f5f9;
-  --glass-bg: rgba(255, 255, 255, 0.92);
-  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-bg: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.5);
 }
 
 body {
@@ -32,22 +32,22 @@ body {
 }
 
 .app-bg {
-  background-image: url('https://raw.githubusercontent.com/kerryraquel/Travel-Image/ea49ec6ae726f671fddd28f568e116903763d2f7/IMG_0267.jpeg');
+  background-image: url('https://raw.githubusercontent.com/kerryraquel/Travel-Image/c3b2fe040575e525c368120d594c16b5d712e230/IMG_0268.jpeg');
   background-size: cover;
   background-position: center bottom;
   position: fixed; inset: 0; z-index: -2;
 }
 
 .app-overlay {
-  background: linear-gradient(to bottom, rgba(241, 245, 249, 0.3) 0%, rgba(241, 245, 249, 0.6) 100%);
+  background: linear-gradient(to bottom, rgba(241, 245, 249, 0.15) 0%, rgba(241, 245, 249, 0.35) 100%);
   position: fixed; inset: 0; z-index: -1;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(1.5px);
 }
 
 .glass-card {
   background: var(--glass-bg);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
   border: 1px solid var(--glass-border);
   border-radius: 1.25rem;
   padding: 1.25rem;
@@ -82,9 +82,10 @@ body {
 }
 .day-scroll::-webkit-scrollbar { display: none; }
 .day-tab {
-  flex: 0 0 auto; min-width: 68px; height: 76px; background: rgba(255, 255, 255, 0.9); 
+  flex: 0 0 auto; min-width: 68px; height: 76px; background: rgba(255, 255, 255, 0.85); 
   border-radius: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: all 0.2s ease; border: 1px solid transparent; cursor: pointer;
+  backdrop-filter: blur(4px);
 }
 .day-tab.active {
   background: #2563eb; color: white; box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
@@ -92,7 +93,7 @@ body {
 }
 
 .flight-card-minimal {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.88);
   border-radius: 1rem;
   padding: 1.5rem;
   margin-bottom: 1rem;
@@ -100,6 +101,7 @@ body {
   border: 1px solid #e2e8f0;
   position: relative;
   overflow: hidden;
+  backdrop-filter: blur(6px);
 }
 .flight-card-minimal::before {
   content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
@@ -124,7 +126,7 @@ body {
 .bottom-nav-container { position: fixed; bottom: 0; left: 0; right: 0; padding: 0 1rem 1.5rem 1rem; z-index: 50; pointer-events: none; }
 .bottom-nav {
   pointer-events: auto; display: flex; justify-content: space-between;
-  background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.88); backdrop-filter: blur(12px);
   border-radius: 2rem; padding: 0.5rem 1.5rem; box-shadow: 0 10px 40px rgba(0,0,0,0.15); max-width: 400px; margin: 0 auto;
 }
 .nav-btn {
@@ -234,7 +236,7 @@ body {
                   </span>
                 </div>
                 
-                <span class="text-sm text-slate-500 leading-relaxed p-2 rounded-lg border mb-1 block bg-white/50 border-slate-100">
+                <span class="text-sm text-slate-600 leading-relaxed p-2 rounded-lg border mb-1 block bg-white/60 border-slate-100">
                   <span v-html="p.note"></span>
                 </span>
 
@@ -404,7 +406,7 @@ body {
         <div class="glass-card">
           <h2 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Trip Overview & Accommodations / 行程總覽與住宿</h2>
           
-          <!-- Hong Kong Hotel (Updated to TBD) -->
+          <!-- Hong Kong Hotel (TBD) -->
           <div class="bg-white border border-slate-100 p-4 rounded-xl mb-3 shadow-sm relative overflow-hidden">
             <div class="relative z-10">
               <div class="flex justify-between items-center mb-2">
