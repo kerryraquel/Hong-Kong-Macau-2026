@@ -77,12 +77,6 @@ body {
 }
 .transport-tag i { margin-right: 4px; width: 14px; text-align: center; }
 
-.ticket-badge {
-  display: inline-block; font-size: 0.65rem; background-color: #dcfce7;
-  color: #166534; padding: 2px 6px; border-radius: 4px; margin-left: 6px;
-  vertical-align: middle; border: 1px solid #bbf7d0;
-}
-
 .day-scroll {
   display: flex; overflow-x: auto; gap: 0.75rem; padding: 0.5rem 0.25rem 1rem 0.25rem; scrollbar-width: none;
 }
@@ -237,7 +231,6 @@ body {
                     <i v-if="p.isNight" class="fa-solid fa-moon text-blue-800 mr-1 text-xs"></i>
                     <i v-if="p.isRelax" class="fa-solid fa-spa text-pink-500 mr-1 text-xs"></i>
                     {{ p.title }}
-                    <span v-if="p.hasTicket" class="ticket-badge"><i class="fa-solid fa-check"></i> Booked / 已預訂</span>
                   </span>
                 </div>
                 
@@ -258,10 +251,11 @@ body {
       <section v-if="tab==='flight'" key="flight">
         <h2 class="text-xl font-bold text-slate-800 mb-4 px-1 drop-shadow-sm" style="text-shadow: 0 1px 2px rgba(255,255,255,0.8);">Key Transport & Intercity Connections / 核心交通與過境資訊</h2>
         
+        <!-- HZMB Shuttle Bus Confirmation -->
         <div class="flight-card-minimal">
           <div class="flight-header">
             <div class="airline-tag">
-              <i class="fa-solid fa-bus text-blue-600"></i> HZMB Bus / 港珠澳大橋金巴
+              <i class="fa-solid fa-bus text-blue-600"></i> HZMB Shuttle Bus / 港珠澳大橋金巴
             </div>
             <div class="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded">Sep 22 (Day 3)</div>
           </div>
@@ -274,19 +268,20 @@ body {
               <div class="route-line">
                 <i class="fa-solid fa-bus route-plane"></i>
               </div>
-              <div class="text-[10px] text-slate-400 mt-3">35 mins / 35 分鐘</div>
+              <div class="text-[10px] text-slate-400 mt-3">35 - 40 mins / 車程約 35-40 分鐘</div>
             </div>
             <div class="text-right">
-              <div class="flight-time">18:05</div>
+              <div class="flight-time">18:10</div>
               <div class="flight-city">Macau Port / 澳門口岸</div>
             </div>
           </div>
           <div class="flight-footer">
             <span>Transfer via B6 Bus from Tung Chung / 由東涌搭 B6 巴士直達</span>
-            <span>Frequency: Every 10-15 mins / 班次密集</span>
+            <span>Frequency: Every 5-15 mins (24 Hours) / 24小時營運 密集班次</span>
           </div>
         </div>
 
+        <!-- Dukling Sailing Junk Confirmation -->
         <div class="flight-card-minimal">
           <div class="flight-header">
             <div class="airline-tag">
@@ -303,16 +298,16 @@ body {
               <div class="route-line">
                 <i class="fa-solid fa-ship route-plane"></i>
               </div>
-              <div class="text-[10px] text-slate-400 mt-3">Sunset Cruise / 夕陽航程</div>
+              <div class="text-[10px] text-slate-400 mt-3">45 mins / 航程約 45 分鐘</div>
             </div>
             <div class="text-right">
-              <div class="flight-time">19:15</div>
+              <div class="flight-time">19:00</div>
               <div class="flight-city">Victoria Harbour / 維多利亞港</div>
             </div>
           </div>
           <div class="flight-footer">
             <span>Authentic 3-masted Chinese Junk / 傳統三帆中式木帆船</span>
-            <span>Pre-booked / 已確認預訂</span>
+            <span>Sunset Cruise Slot / 黃昏夕陽航程</span>
           </div>
         </div>
       </section>
@@ -409,17 +404,17 @@ body {
         <div class="glass-card">
           <h2 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2">Trip Overview & Accommodations / 行程總覽與住宿</h2>
           
-          <!-- Hong Kong Hotel -->
+          <!-- Hong Kong Hotel (Updated to TBD) -->
           <div class="bg-white border border-slate-100 p-4 rounded-xl mb-3 shadow-sm relative overflow-hidden">
             <div class="relative z-10">
               <div class="flex justify-between items-center mb-2">
-                <h3 class="font-bold text-base text-slate-800">香港灣仔皇悅酒店<br><span class="text-xs text-slate-500 font-normal">Empire Hotel Hong Kong - Wan Chai</span></h3>
-                <span class="text-[10px] font-bold bg-blue-50 text-blue-600 px-2 py-1 rounded-full">Sep 20 - Sep 22</span>
+                <h3 class="font-bold text-base text-slate-800">香港住宿待定<br><span class="text-xs text-slate-500 font-normal">Hong Kong Accommodation TBD</span></h3>
+                <span class="text-[10px] font-bold bg-amber-50 text-amber-600 px-2 py-1 rounded-full">Sep 20 - Sep 22</span>
               </div>
               <div class="text-xs text-slate-600 mb-1 flex items-center">
-                <i class="fa-solid fa-location-dot mr-2 text-slate-400"></i> 香港灣仔軒尼詩道33號 (機場巴士 A11 直達) / 33 Hennessy Rd, Wan Chai (Airport Bus A11 direct)
+                <i class="fa-solid fa-location-dot mr-2 text-slate-400"></i> 香港島地鐵沿線飯店 / Hong Kong Island (Near MTR station)
               </div>
-              <div class="text-xs text-emerald-500 pl-6 font-bold"><i class="fa-solid fa-check"></i> Confirmed & Booked / 已確認預訂</div>
+              <div class="text-xs text-amber-500 pl-6 font-bold"><i class="fa-solid fa-clock"></i> TBD / 待定</div>
             </div>
           </div>
 
@@ -433,7 +428,6 @@ body {
               <div class="text-xs text-slate-600 mb-1 flex items-center">
                 <i class="fa-solid fa-location-dot mr-2 text-slate-400"></i> 澳門舊城區 (下樓即為懷舊老街與地道美食) / Macau Peninsula Historic Center
               </div>
-              <div class="text-xs text-emerald-500 pl-6 font-bold"><i class="fa-solid fa-check"></i> Confirmed & Booked / 已確認預訂</div>
             </div>
           </div>
         </div>
@@ -539,9 +533,9 @@ createApp({
        {
          time:'18:15',
          title:'Star Ferry & Dukling Sunset Cruise / 天星小輪過海與鴨靈號夕陽航程',
-         note:'於灣仔搭乘天星小輪過海至尖沙咀，散步星光大道與香港藝術館高空玻璃長廊；登上有「香港標誌」之稱的鴨靈號 (Dukling) 古船，乘風破浪欣賞維港夕陽。 / Take Star Ferry to TST, stroll Avenue of Stars, and board historic Dukling sailing junk for a sunset Victoria Harbour cruise.',
-         isFerry: true, hasTicket: true,
-         transport:'<span class="text-slate-400">Ferry / 渡輪:</span> <i class="fa-solid fa-ship"></i> Star Ferry & Dukling / 天星小輪與鴨靈號'
+         note:'於灣仔搭乘天星小輪過海至尖沙咀，散步星光大道與香港藝術館高空玻璃長廊；登上有「香港標誌」之稱的鴨靈號 (Dukling) 古船（航程約 45 分鐘），乘風破浪欣賞維港夕陽。 / Take Star Ferry to TST, stroll Avenue of Stars, and board historic Dukling sailing junk (approx. 45 mins cruise) for a sunset Victoria Harbour cruise.',
+         isFerry: true,
+         transport:'<span class="text-slate-400">Ferry / 渡輪:</span> <i class="fa-solid fa-ship"></i> Star Ferry & Dukling (45 mins) / 天星小輪與鴨靈號'
        },
        {
          time:'19:30',
@@ -581,8 +575,8 @@ createApp({
      {day:'Day 3', weekDay:'TUE', display:'22',date:'Sep 22',city:'HK -> Macau / 香港大澳水鄉 ➔ 金巴無縫過境澳門',plans:[
        {
          time:'11:00',
-         title:'Hotel Check-out & MTR to Tung Chung / 灣仔皇悅 Check-out 搭地鐵往東涌',
-         note:'灣仔皇悅酒店 Check-out，攜行李搭地鐵直達東涌站。 / Check out from Empire Hotel Wan Chai and take MTR directly to Tung Chung Station.',
+         title:'Hotel Check-out & MTR to Tung Chung / 香港飯店 Check-out 搭地鐵往東涌',
+         note:'香港飯店 Check-out，攜行李搭地鐵直達東涌站。 / Check out from Hong Kong hotel and take MTR directly to Tung Chung Station.',
          isWalk: true,
          transport:'<span class="text-slate-400">Transport / 交通:</span> <i class="fa-solid fa-train-subway"></i> MTR Tung Chung Line / 地鐵東涌線'
        },
@@ -594,16 +588,16 @@ createApp({
        },
        {
          time:'12:00',
-         title:'Tai O Water Village & Solo Cafe / 大澳水鄉漫步、小艇尋白海豚與河畔咖啡',
-         note:'搭乘計程車/11號大巴至大澳水鄉：漫步水上棚屋、品嚐炭燒雞蛋仔與巨型墨魚、搭小艇尋找中華白海豚，於蘇廬 (Solo Cafe) 喝河畔手沖咖啡或前往大澳文物酒店享用冷飲。 / Bus/Taxi to Tai O: stroll stilt houses, eat bubble waffles & giant squid, boat ride for pink dolphins, and sip coffee at Solo Cafe or Tai O Heritage Hotel.',
-         isFerry: true, isFood: true
+         title:'Tai O Water Village & Solo Cafe / 大澳水鄉漫步與河畔咖啡',
+         note:'搭乘計程車/11號大巴至大澳水鄉：漫步水上棚屋、品嚐炭燒雞蛋仔與巨型墨魚，於蘇廬 (Solo Cafe) 喝河畔手沖咖啡或前往大澳文物酒店享用冷飲。 / Bus/Taxi to Tai O: stroll stilt houses, eat bubble waffles & giant squid, and sip coffee at Solo Cafe or Tai O Heritage Hotel.',
+         isWalk: true, isFood: true
        },
        {
          time:'17:00',
          title:'HZMB Bus Transfer to Macau / B6 巴士往口岸搭金巴直達澳門',
-         note:'返回東涌站取行李，於站外搭 B6 巴士（15 分鐘）直達港珠澳大橋香港口岸，搭乘金巴（35 分鐘）順暢抵達澳門口岸。 / Retrieve luggage at Tung Chung, B6 bus (15 mins) to HZMB HK Port, then HZMB Shuttle Bus (35 mins) to Macau.',
+         note:'返回東涌站取行李，於站外搭 B6 巴士（15 分鐘）直達港珠澳大橋香港口岸，搭乘金巴（車程約 35-40 分鐘）順暢抵達澳門口岸。 / Retrieve luggage at Tung Chung, B6 bus (15 mins) to HZMB HK Port, then HZMB Shuttle Bus (approx. 35-40 mins) to Macau Port.',
          isWalk: true,
-         transport:'<span class="text-slate-400">Cross Boundary / 跨海:</span> <i class="fa-solid fa-bus"></i> B6 Bus & HZMB Shuttle Bus (金巴)'
+         transport:'<span class="text-slate-400">Cross Boundary / 跨海:</span> <i class="fa-solid fa-bus"></i> B6 Bus & HZMB Shuttle Bus (車程 35-40 分鐘)'
        },
        {
          time:'20:00',
@@ -648,7 +642,7 @@ createApp({
          time:'19:00',
          title:'A Lorcha Portuguese Dinner / 船屋葡國餐廳正宗葡菜晚宴',
          note:'位於媽閣廟前地，享用招牌橄欖油蒜蓉炒蜆、葡國雞、海鮮飯配葡國紅酒。 / Authentic Portuguese dinner at A Lorcha near A-Ma Temple: clams in garlic oil, Portuguese chicken, seafood rice & red wine.',
-         isFood: true, hasTicket: true
+         isFood: true
        },
        {
          time:'21:30',
@@ -661,8 +655,8 @@ createApp({
      {day:'Day 5', weekDay:'THU', display:'24',date:'Sep 24',city:'Macau Cotai & Coloane / 離島自駕慢活 (南屏雅敘、路環、六棉酒家與威尼斯人)',plans:[
        {
          time:'11:00',
-         title:'Nam Peng Cafe Vintage Breakfast / 南屏雅敘懷舊厚切叉燒蛋文治',
-         note:'11:00 出門（就在十月初五日街），享用懷舊厚切叉燒蛋文治與熱奶茶。 / Head down to Nam Peng Cafe for thick-cut char siu egg sandwich and hot milk tea.',
+         title:'Nam Peng Cafe Local Breakfast / 南屏雅敘在地早餐',
+         note:'11:00 出門（就在十月初五日街），前往南屏雅敘享用在地早餐。 / Head down to Nam Peng Cafe for local breakfast.',
          isFood: true
        },
        {
@@ -674,14 +668,14 @@ createApp({
        {
          time:'14:30',
          title:'Drive to Coloane & Lord Stow\'s Bakery / 自駕路環漁村與安德魯葡撻',
-         note:'開車前往路環海岸線漫步，享用剛出爐的安德魯葡撻與冷飲。 / Drive along Coloane seaside promenade, tasting fresh Lord Stow\'s Portuguese egg tarts.',
+         note:'開車前往路環海岸線漫步，享用剛出爐的安德魯葡撻。 / Head down to Coloane seaside promenade, tasting fresh Lord Stow\'s Portuguese egg tarts.',
          isWalk: true, isFood: true
        },
        {
          time:'17:00',
-         title:'Restaurante Kapok Cantonese Dinner / 六棉酒家頂級粵菜晚宴',
-         note:'自駕前往氹仔杭州街六棉酒家，享用招牌杏汁燉豬肺湯、炸子雞與廣東名菜（已訂位 17:00）。 / Drive to Restaurante Kapok in Taipa for top-notch Cantonese dinner: almond pork lung soup & crispy chicken.',
-         isFood: true, hasTicket: true
+         title:'Restaurante Kapok Cantonese Dinner / 六棉酒家粵菜晚宴',
+         note:'自駕前往氹仔杭州街六棉酒家，享用招牌杏汁燉豬肺湯與脆皮炸子雞。 / Drive to Restaurante Kapok in Taipa for Cantonese dinner: almond pork lung soup & crispy chicken.',
+         isFood: true
        },
        {
          time:'19:15',
@@ -744,7 +738,7 @@ createApp({
      });
    });
 
-   // Provided exact thumbnail list mapping with raw.githubusercontent links
+   // Exact thumbnail mapping provided
    const attractionDetails = [
       { city: 'HK', name: '堅尼地城海旁 / New Praya Kennedy Town', tag: 'Seaside Coffee', desc: '著名的西環海旁景色，融合手沖咖啡與開闊維港視野。 / Famous K-Town waterfront view blending specialty coffee with open Victoria Harbour scenery.', img: 'https://raw.githubusercontent.com/kerryraquel/Travel-Image/c3b2fe040575e525c368120d594c16b5d712e230/thumbnail%20new%20praya%20kennedy%20town.jpg' },
       { city: 'HK', name: '港島電車 (叮叮車) / Hong Kong Tramways', tag: 'Heritage Transport', desc: '百年雙層電車，二樓車頭為縱覽港島老街的最佳視角。 / Historic double-decker tram; front seats on upper deck offer prime city views.', img: 'https://raw.githubusercontent.com/kerryraquel/Travel-Image/c3b2fe040575e525c368120d594c16b5d712e230/thumbnail%20tram.jpg' },
