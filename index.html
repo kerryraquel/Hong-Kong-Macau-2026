@@ -20,8 +20,8 @@
 :root {
   --primary: #2563eb;
   --bg-color: #f1f5f9;
-  --glass-bg: rgba(255, 255, 255, 0.82);
-  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.6);
 }
 
 body {
@@ -32,7 +32,7 @@ body {
 }
 
 .app-bg {
-  background-image: url('https://raw.githubusercontent.com/kerryraquel/Travel-Image/c3b2fe040575e525c368120d594c16b5d712e230/IMG_0268.jpeg');
+  background-image: url('https://raw.githubusercontent.com/kerryraquel/Travel-Image/769cc45e059265df2c4de431a5e158dea9b3c90f/IMG_0265.jpeg');
   background-size: cover;
   background-position: center bottom;
   position: fixed; inset: 0; z-index: -2;
@@ -93,9 +93,9 @@ body {
 }
 
 .flight-card-minimal {
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: 1.25rem;
   margin-bottom: 1rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   border: 1px solid #e2e8f0;
@@ -107,17 +107,8 @@ body {
   content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
   background: #2563eb;
 }
-.flight-header { display: flex; justify-content: space-between; margin-bottom: 1rem; align-items: center; }
+.flight-header { display: flex; justify-content: space-between; margin-bottom: 0.75rem; align-items: center; }
 .airline-tag { display: flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; color: #64748b; }
-.flight-body { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-.flight-time { font-size: 1.75rem; font-weight: 800; color: #0f172a; line-height: 1; }
-.flight-city { font-size: 0.85rem; font-weight: 600; color: #64748b; margin-top: 4px; }
-.flight-route { flex: 1; display: flex; flex-col; align-items: center; padding: 0 1rem; position: relative; }
-.route-line { width: 100%; height: 2px; background: #e2e8f0; position: relative; }
-.route-plane { 
-  position: absolute; top: -6px; left: 50%; transform: translateX(-50%);
-  color: #2563eb; background: #fff; padding: 0 6px; font-size: 0.8rem;
-}
 .flight-footer { 
   border-top: 1px dashed #e2e8f0; padding-top: 0.75rem; 
   display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b; font-weight: 500;
@@ -261,25 +252,24 @@ body {
             </div>
             <div class="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded">Sep 22 (Day 3)</div>
           </div>
-          <div class="flight-body">
+          <div class="grid grid-cols-3 items-center gap-2 mb-2">
             <div>
-              <div class="flight-time">17:30</div>
-              <div class="flight-city">Hong Kong Port / 香港口岸</div>
+              <div class="text-2xl font-black text-slate-900 leading-none">17:30</div>
+              <div class="text-xs font-bold text-slate-500 mt-1">Hong Kong Port<br><span class="text-[10px] font-normal text-slate-400">香港口岸</span></div>
             </div>
-            <div class="flight-route">
-              <div class="route-line">
-                <i class="fa-solid fa-bus route-plane"></i>
-              </div>
-              <div class="text-[10px] text-slate-400 mt-3">35 - 40 mins / 車程約 35-40 分鐘</div>
+            <div class="text-center flex flex-col items-center">
+              <span class="text-xs text-blue-600 font-bold mb-1"><i class="fa-solid fa-bus"></i> 35-40m</span>
+              <div class="w-full h-[2px] bg-slate-200 relative my-1"></div>
+              <span class="text-[10px] text-slate-400">車程約 35-40 分鐘</span>
             </div>
             <div class="text-right">
-              <div class="flight-time">18:10</div>
-              <div class="flight-city">Macau Port / 澳門口岸</div>
+              <div class="text-2xl font-black text-slate-900 leading-none">18:10</div>
+              <div class="text-xs font-bold text-slate-500 mt-1">Macau Port<br><span class="text-[10px] font-normal text-slate-400">澳門口岸</span></div>
             </div>
           </div>
           <div class="flight-footer">
             <span>Transfer via B6 Bus from Tung Chung / 由東涌搭 B6 巴士直達</span>
-            <span>Frequency: Every 5-15 mins (24 Hours) / 24小時營運 密集班次</span>
+            <span>Frequency: Every 5-15 mins (24 Hours)</span>
           </div>
         </div>
 
@@ -291,20 +281,19 @@ body {
             </div>
             <div class="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded">Sep 20 (Day 1)</div>
           </div>
-          <div class="flight-body">
+          <div class="grid grid-cols-3 items-center gap-2 mb-2">
             <div>
-              <div class="flight-time">18:15</div>
-              <div class="flight-city">TST Pier / 尖沙咀碼頭</div>
+              <div class="text-2xl font-black text-slate-900 leading-none">18:15</div>
+              <div class="text-xs font-bold text-slate-500 mt-1">TST Pier<br><span class="text-[10px] font-normal text-slate-400">尖沙咀碼頭</span></div>
             </div>
-            <div class="flight-route">
-              <div class="route-line">
-                <i class="fa-solid fa-ship route-plane"></i>
-              </div>
-              <div class="text-[10px] text-slate-400 mt-3">45 mins / 航程約 45 分鐘</div>
+            <div class="text-center flex flex-col items-center">
+              <span class="text-xs text-sky-500 font-bold mb-1"><i class="fa-solid fa-ship"></i> 45 mins</span>
+              <div class="w-full h-[2px] bg-slate-200 relative my-1"></div>
+              <span class="text-[10px] text-slate-400">航程約 45 分鐘</span>
             </div>
             <div class="text-right">
-              <div class="flight-time">19:00</div>
-              <div class="flight-city">Victoria Harbour / 維多利亞港</div>
+              <div class="text-2xl font-black text-slate-900 leading-none">19:00</div>
+              <div class="text-xs font-bold text-slate-500 mt-1">Victoria Harbour<br><span class="text-[10px] font-normal text-slate-400">維多利亞港</span></div>
             </div>
           </div>
           <div class="flight-footer">
@@ -515,10 +504,10 @@ createApp({
      {day:'Day 1', weekDay:'SUN', display:'20',date:'Sep 20',city:'Hong Kong / 香港 (Baker抵港、飯店會合、天星小輪與鴨靈號夕陽)',plans:[
        {
          time:'15:35',
-         title:'Baker Flight Landing at HKG / Baker 班機降落香港機場',
-         note:'Baker 班機於 15:35 降落香港國際機場，完成入境與提取行李後搭乘機場快綫前往市區飯店會合。 / Baker lands at HKG at 15:35, clearing customs and taking Airport Express to join at the hotel.',
+         title:'Flight Landing at HKG / 降落香港機場',
+         note:'於 15:35 降落香港國際機場，完成入境與提取行李後搭乘機場快綫前往市區飯店會合。 / Lands at HKG at 15:35, clearing customs and taking Airport Express to join at the hotel.',
          isWalk: true,
-         transport:'<span class="text-slate-400">Airport Transport / 機場交通:</span> <i class="fa-solid fa-train"></i> Airport Express / 機場快線'
+         transport:'<span class="text-slate-400">Airport Transport / 機場交通:</span> <i class="fa-solid fa-train"></i> Airport Express / 機場快綫'
        },
        {
          time:'17:15',
